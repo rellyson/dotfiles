@@ -1,0 +1,34 @@
+env:
+  TERM: xterm-256color
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+import:
+  - ~/.config/alacritty/colorscheme.yml
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+  size: 13
+  window:
+    padding:
+      x: 6
+      y: 2
+    opacity: 1.0
+    title: Terminal
+  cursor:
+    style: Block
+  mouse:
+    hide_when_typing: true
