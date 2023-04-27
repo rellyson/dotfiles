@@ -1,0 +1,5 @@
+plugin/
+colors/*
+ftplugin/
+spell
+.luarc.json
