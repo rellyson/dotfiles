@@ -14,3 +14,4 @@ This repository contains dotfiles that I use in my daily workflow.
 - [alacritty](https://github.com/alacritty/alacritty)
 - [neovim](https://github.com/neovim/neovim)
 - [tmux](https://github.com/tmux/tmux)
+- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
