@@ -24,6 +24,7 @@ local servers = {
   "marksman",
   "pyright",
   "tsserver",
+  "tflint",
   "terraformls",
   "rust_analyzer",
   "sqlls",

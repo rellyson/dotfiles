@@ -15,3 +15,4 @@ This repository contains dotfiles that I use in my daily workflow.
 - [neovim](https://github.com/neovim/neovim)
 - [tmux](https://github.com/tmux/tmux)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- [git-delta](https://github.com/dandavison/delta)

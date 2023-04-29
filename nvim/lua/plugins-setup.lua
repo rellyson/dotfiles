@@ -108,6 +108,7 @@ return packer.startup(function(use)
   use {'akinsho/git-conflict.nvim', tag = "*", config = function() -- git conflict
     require('git-conflict').setup()
   end}
+  use {'hashivim/vim-terraform', ft = 'terraform'} -- terraform
 
   if packer_bootstrap then
     require('packer').sync()

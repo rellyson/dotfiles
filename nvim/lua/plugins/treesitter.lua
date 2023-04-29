@@ -11,6 +11,7 @@ local languages = {
   'elixir',
   'gitignore',
   'go',
+  'hcl',
   'java',
   'javascript',
   'jsdoc',
