@@ -9,6 +9,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
+vim.cmd([[ highlight NvimTreeGitIgnored guifg=#6F839E ]])
 
 nvimtree.setup {
   diagnostics = {
@@ -21,8 +22,18 @@ nvimtree.setup {
       error = "",
     },
   },
+  filters = {
+    dotfiles = false,
+    custom = {
+      "node_modules",
+      ".git",
+      ".cache",
+      ".DS_Store",
+    },
+  },
   git = {
     enable = true,
+    ignore = false,
     show_on_dirs = true,
   },
   view = {

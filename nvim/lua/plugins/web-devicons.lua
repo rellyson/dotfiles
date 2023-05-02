@@ -81,6 +81,16 @@ webdevicons.setup {
       icon = "",
       color = "#4B8DDE",
       name = "SetupPy"
+    },
+    [".terraform.lock.hcl"] = {
+      icon = "",
+      color = "#eb4034",
+      name = "Tflock"
+    },
+    ["pipevalve.yml"] = {
+      icon = "󱡍",
+      color = "#6fa1c9",
+      name = "Pipevalve"
     }
   },
   override_by_extension = {
@@ -112,6 +122,11 @@ webdevicons.setup {
       color = "#3970E4",
       name = "Template"
     },
+    tf = {
+      icon = "󱁢",
+      color = "#844FBA",
+      name = "Terraform"
+    },
     tfvars = {
       icon = "",
       color = "#844FBA",
@@ -121,6 +136,11 @@ webdevicons.setup {
       icon = "",
       color = "#844FBA",
       name = "Terraform"
+    },
+    hcl = {
+      icon = "",
+      color = "#E3E4E6",
+      name = "HCL"
     },
     properties = {
       icon = "",
