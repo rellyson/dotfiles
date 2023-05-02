@@ -138,7 +138,7 @@ webdevicons.setup {
       name = "Jest"
     },
     [".prettierrc"] = {
-      icon = "󰬗",
+      icon = material_icon.get_icon('.prettierrc.js', 'Prettier', { default = true }),
       name = "Prettier"
     },
     [".prettierignore"] = {
@@ -200,6 +200,11 @@ webdevicons.setup {
       icon = "󰏗",
       color = "#C27E42",
       name = "Cargo"
+    },
+    [".python-version"] = {
+      icon = "",
+      color = "#FFD43B",
+      name = "Python"
     }
   },
   override_by_extension = {
