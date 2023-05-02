@@ -30,6 +30,9 @@ nvimtree.setup {
       ".cache",
       ".DS_Store",
     },
+    exclude = {
+      ".gitignore",
+    },
   },
   git = {
     enable = true,
