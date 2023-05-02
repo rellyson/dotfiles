@@ -29,6 +29,7 @@ nvimtree.setup {
       ".git",
       ".cache",
       ".DS_Store",
+      ".vscode",
     },
     exclude = {
       ".gitignore",

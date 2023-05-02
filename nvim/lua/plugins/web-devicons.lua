@@ -138,8 +138,13 @@ webdevicons.setup {
       name = "Jest"
     },
     [".prettierrc"] = {
-      icon = "󰫽",
+      icon = "󰬗",
       name = "Prettier"
+    },
+    [".prettierignore"] = {
+      icon = "󰬗",
+      color = "#CB2020",
+      name = "PrettierIgnore"
     },
     [".eslintrc.js"] = {
       icon = "",
@@ -175,6 +180,21 @@ webdevicons.setup {
       icon = "󰄛",
       color = "#E0234E",
       name = "Nest"
+    },
+    ["openapi.json"] = {
+      icon = "",
+      color = "#6BA539",
+      name = "Openapi"
+    },
+    ["swagger.json"] = {
+      icon = "󰘦",
+      color = "#6BA539",
+      name = "Swagger"
+    },
+    ["swagger.yaml"] = {
+      icon = "󰘦",
+      color = "#6BA539",
+      name = "Swagger"
     }
   },
   override_by_extension = {
@@ -235,6 +255,11 @@ webdevicons.setup {
       icon = "",
       color = "#F54842",
       name = "Make"
+    },
+    cert = {
+      icon = "󰄤",
+      color = "#3BD9DD",
+      name = "Cert"
     }
   }
 }
