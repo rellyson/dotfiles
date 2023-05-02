@@ -63,7 +63,7 @@ webdevicons.setup {
       name = "helm",
     },
     [".editorconfig"] = {
-      icon = "",
+      icon = "",
       color = "#6F839E",
       name = "EditorConfig",
     },
@@ -91,6 +91,90 @@ webdevicons.setup {
       icon = "󱡍",
       color = "#6fa1c9",
       name = "Pipevalve"
+    },
+    [".goreleaser.yaml"] = {
+      icon = "󱓞",
+      color = "#00ADD8",
+      name = "Goreleaser"
+    },
+    ["azure-pipelines.yml"] = {
+      icon = "",
+      color = "#0078D7",
+      name = "AzurePipelines"
+    },
+    [".golangci.yml"] = {
+      icon = "󱏚",
+      color = "#17AfC2",
+      name = "Golangci"
+    },
+    [".golangci.yaml"] = {
+      icon = "󱏚",
+      color = "#17AfC2",
+      name = "Golangci"
+    },
+    [".golangci.toml"] = {
+      icon = "󱏚",
+      color = "#17AfC2",
+      name = "Golangci"
+    },
+    [".golangci.json"] = {
+      icon = "󱏚",
+      color = "#17AfC2",
+      name = "Golangci"
+    },
+    [".air.toml"] = {
+      icon = "󰖝",
+      color = "#f2f2f2",
+      name = "Air"
+    },
+    [".jest.config.js"] = {
+      icon = "",
+      color = "#C21325",
+      name = "Jest"
+    },
+    [".jest.config.json"] = {
+      icon = "",
+      color = "#C21325",
+      name = "Jest"
+    },
+    [".prettierrc"] = {
+      icon = "󰫽",
+      name = "Prettier"
+    },
+    [".eslintrc.js"] = {
+      icon = "",
+      color = "#4B32C3",
+      name = "Eslint"
+    },
+    [".nvmrc"] = {
+      icon = "",
+      color = "#CAB841",
+      name = "Nvmrc"
+    },
+    ["jsconfig.json"] = {
+      icon = "",
+      color = "#0078D3",
+      name = "Jsconfig"
+    },
+    ["tsconfig.json"] = {
+      icon = "",
+      color = "#0078D3",
+      name = "Jsconfig"
+    },
+    ["sonar-project.properties"] = {
+      icon = "󰼮",
+      color = "#CB2029",
+      name = "Sonar"
+    },
+    ["nodemon.json"] = {
+      icon = "",
+      color = "#76D04B",
+      name = "Nodemon"
+    },
+    ["nest-cli.json"] = {
+      icon = "󰄛",
+      color = "#E0234E",
+      name = "Nest"
     }
   },
   override_by_extension = {
@@ -146,6 +230,11 @@ webdevicons.setup {
       icon = "",
       color = "#3970B4",
       name = "Properties"
+    },
+    makefile = {
+      icon = "",
+      color = "#F54842",
+      name = "Make"
     }
   }
 }
