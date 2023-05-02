@@ -192,9 +192,14 @@ webdevicons.setup {
       name = "Swagger"
     },
     ["swagger.yaml"] = {
-      icon = "󰘦",
+      icon = material_icon.get_icon_by_filetype('yml', { default = true }),
       color = "#6BA539",
       name = "Swagger"
+    },
+    ["cargo.toml"] = {
+      icon = "󰏗",
+      color = "#C27E42",
+      name = "Cargo"
     }
   },
   override_by_extension = {
@@ -257,6 +262,11 @@ webdevicons.setup {
       name = "Make"
     },
     cert = {
+      icon = "󰄤",
+      color = "#3BD9DD",
+      name = "Cert"
+    },
+    crt = {
       icon = "󰄤",
       color = "#3BD9DD",
       name = "Cert"
