@@ -205,6 +205,31 @@ webdevicons.setup {
       icon = "",
       color = "#FFD43B",
       name = "Python"
+    },
+    ["mix.exs"] = {
+      icon = "",
+      color = "#A04FFF",
+      name = "Mix",
+    },
+    ["mix.lock"] = {
+      icon = "",
+      color = "#CB2020",
+      name = "MixLockFile",
+    },
+    ["formatter.exs"] = {
+      icon = "",
+      color = "#0078D1",
+      name = "ElixirFormatter",
+    },
+     [".formatter.exs"] = {
+      icon = "",
+      color = "#0078D1",
+      name = "ElixirFormatter",
+    },
+    [".credo.exs"] = {
+      icon = "",
+      color = "#AA04EE",
+      name = "Credo",
     }
   },
   override_by_extension = {
