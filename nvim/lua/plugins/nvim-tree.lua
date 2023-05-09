@@ -8,18 +8,29 @@ vim.g.loaded = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
-vim.cmd([[ highlight NvimTreeGitIgnored guifg=#6F839E ]])
+
+vim.cmd([[ highlight NvimTreeFolderName guifg=#aeafda ]])
+vim.cmd([[ highlight NvimTreeOpenedFolderName guifg=#aeafda ]])
+vim.cmd([[ highlight NvimTreeEmptyFolderName guifg=#aeafda ]])
+
+vim.cmd([[ highlight NvimTreeFolderIcon guifg=#8788ab ]])
+vim.cmd([[ highlight NvimTreeIndentMarker guifg=#6f708f ]])
+
+vim.cmd([[ highlight NvimTreeFileNew guifg=#6fa868 ]])
+vim.cmd([[ highlight NvimTreeFileStaged guifg=#6fa868 ]])
+vim.cmd([[ highlight NvimTreeFileDirty guifg=#948f6d ]])
+vim.cmd([[ highlight NvimTreeFileDeleted guifg=#c14a4a ]])
+vim.cmd([[ highlight NvimTreeFileIgnored guifg=#6F839E ]])
 
 nvimtree.setup {
   diagnostics = {
     enable = true,
     show_on_dirs = false,
      icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      hint = "󱩎",
+      info = "",
+      warning = "",
+      error = "",
     },
   },
   filters = {
@@ -52,7 +63,7 @@ nvimtree.setup {
    icons = {
      webdev_colors = true,
      glyphs = {
-       symlink = "",
+       symlink = "",
        folder = {
          arrow_closed = "",
          arrow_open = "",
@@ -60,17 +71,17 @@ nvimtree.setup {
          open = "",
          empty = "",
          empty_open = "",
-         symlink = "",
-         symlink_open = "",
+         symlink = "",
+         symlink_open = "",
        },
        git = {
-         unstaged = "",
-         staged = "",
+         unstaged = "",
+         staged = "",
          unmerged = "",
          renamed = "➜",
-         untracked = "",
+         untracked = "",
          deleted = "",
-         ignored = "◌",
+         ignored = "",
        },
      },
    },
