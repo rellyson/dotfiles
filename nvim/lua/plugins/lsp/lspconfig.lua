@@ -164,6 +164,11 @@ lspconfig['tflint'].setup {
 lspconfig['tsserver'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    },
+  },
   settings = {
     typescript = {
       format = {

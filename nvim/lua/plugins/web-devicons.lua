@@ -6,6 +6,13 @@ end
 webdevicons.setup {
   default = false,
   color_icons = true,
+  override = {
+    default = {
+      icon = "",
+      color = "#6F839E",
+      name = "Default"
+    },
+  },
   override_by_filename = {
      ["readme.md"] = {
        icon = "",
@@ -33,13 +40,14 @@ webdevicons.setup {
        name = "Requirements"
      },
      ["go.mod"] = {
-       icon = "",
+       icon = "",
        color = "#00ADD8",
-       name = "Go"
+       name = "Gomod"
      },
      ["go.sum"] = {
-       icon = "",
-       color = "#6F839E",
+       icon = "",
+       color = "#ec407a",
+       name = "Gosum",
      },
      ["chart.yaml"] = {
        icon = "⎈",
@@ -237,11 +245,6 @@ webdevicons.setup {
     }
   },
   override_by_extension = {
-    default = {
-      icon = "",
-      color = "#6F839E",
-      name = "Default"
-    },
     lock = {
       icon = "",
       color = "#eb4034",
@@ -330,5 +333,10 @@ webdevicons.setup {
       color = "#ebebeb",
       name = "Puml",
     },
+    log = {
+      icon = "󱞎",
+      color = "#afb42b",
+      name = "Log",
+    }
   }
 }
