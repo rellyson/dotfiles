@@ -224,6 +224,16 @@ webdevicons.setup {
       icon = "󰉢",
       color = "#AA04EE",
       name = "Credo",
+    },
+    ["workspace.dsl"] = {
+      icon = "󰹗",
+      color = "#85bbf0",
+      name = "Structurizr",
+    },
+    ["workspace.json"] = {
+      icon = "󰹗",
+      color = "#85bbf0",
+      name = "Structurizr",
     }
   },
   override_by_extension = {
@@ -234,7 +244,7 @@ webdevicons.setup {
     },
     lock = {
       icon = "",
-      color = "#8BE9FD",
+      color = "#eb4034",
       name = "lock"
     },
     sh = {
@@ -293,7 +303,6 @@ webdevicons.setup {
     },
     crt = {
       icon = "󰄤",
-      color = "#3BD9DD",
       name = "Cert"
     },
     yml = {
@@ -305,6 +314,21 @@ webdevicons.setup {
       icon = "󰈙",
       color = "#f44336",
       name = "Yaml",
+    },
+    drawio = {
+      icon = "",
+      color = "#f08705",
+      name = "Drawio",
+    },
+    puml = {
+      icon = "󰈏",
+      color = "#ebebeb",
+      name = "Puml",
+    },
+    pu = {
+      icon = "󰈏",
+      color = "#ebebeb",
+      name = "Puml",
     },
   }
 }

@@ -41,6 +41,8 @@ nvimtree.setup {
       ".cache",
       ".DS_Store",
       ".vscode",
+      ".egg-info",
+      "__pycache__",
     },
     exclude = {
       ".gitignore",
