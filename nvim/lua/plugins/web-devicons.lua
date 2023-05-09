@@ -3,15 +3,9 @@ if not setup then
   return
 end
 
-local material_setup, material_icon = pcall(require, "nvim-material-icon")
-if not material_setup then
-	return
-end
-
 webdevicons.setup {
   default = false,
   color_icons = true,
-  override = material_icon.get_icons(),
   override_by_filename = {
      ["readme.md"] = {
        icon = "",
@@ -22,6 +16,11 @@ webdevicons.setup {
        icon = "",
        color = "#BD77DC",
        name = "Changelog"
+     },
+     [".gitignore"] = {
+       icon = "",
+       color = "#F14C28",
+       name = "Gitignore"
      },
      ["gemfile"] = {
        icon = "",
@@ -68,9 +67,9 @@ webdevicons.setup {
       name = "EditorConfig",
     },
     [".shellcheckrc"] = {
-      icon =  material_icon.get_icon_by_filetype('sh', { default = false }),
+      icon =  "󰆍",
       color = "#801013",
-      name = "Shell"
+      name = "Shellcheck"
     },
     ["pyproject.toml"] = {
       icon = "",
@@ -83,14 +82,9 @@ webdevicons.setup {
       name = "SetupPy"
     },
     [".terraform.lock.hcl"] = {
-      icon = "",
+      icon = "",
       color = "#eb4034",
       name = "Tflock"
-    },
-    ["pipevalve.yml"] = {
-      icon = "󱡍",
-      color = "#6fa1c9",
-      name = "Pipevalve"
     },
     [".goreleaser.yaml"] = {
       icon = "󱓞",
@@ -128,17 +122,17 @@ webdevicons.setup {
       name = "Air"
     },
     [".jest.config.js"] = {
-      icon = "",
-      color = "#C21325",
+      icon = "󰬑",
+      color = "#853957",
       name = "Jest"
     },
     [".jest.config.json"] = {
-      icon = "",
-      color = "#C21325",
+      icon = "󰬑",
+      color = "#853957",
       name = "Jest"
     },
     [".prettierrc"] = {
-      icon = material_icon.get_icon('.prettierrc.js', 'Prettier', { default = true }),
+      icon = "󰫽",
       name = "Prettier"
     },
     [".prettierignore"] = {
@@ -152,7 +146,7 @@ webdevicons.setup {
       name = "Eslint"
     },
     [".nvmrc"] = {
-      icon = "",
+      icon = "󰋙",
       color = "#CAB841",
       name = "Nvmrc"
     },
@@ -172,8 +166,8 @@ webdevicons.setup {
       name = "Sonar"
     },
     ["nodemon.json"] = {
-      icon = "",
-      color = "#76D04B",
+      icon = "",
+      color = "#6CC24A",
       name = "Nodemon"
     },
     ["nest-cli.json"] = {
@@ -192,7 +186,7 @@ webdevicons.setup {
       name = "Swagger"
     },
     ["swagger.yaml"] = {
-      icon = material_icon.get_icon_by_filetype('yml', { default = true }),
+      icon = "󰈙",
       color = "#6BA539",
       name = "Swagger"
     },
@@ -202,7 +196,7 @@ webdevicons.setup {
       name = "Cargo"
     },
     [".python-version"] = {
-      icon = "",
+      icon = "󱔎",
       color = "#FFD43B",
       name = "Python"
     },
@@ -227,37 +221,38 @@ webdevicons.setup {
       name = "ElixirFormatter",
     },
     [".credo.exs"] = {
-      icon = "",
+      icon = "󰉢",
       color = "#AA04EE",
       name = "Credo",
     }
   },
   override_by_extension = {
-    lock = {
-      icon = "",
-      color = "#8BE9FD",
-      name = "lock"
-    },
-    yaml = {
-      icon =  material_icon.get_icon_by_filetype('yml', { default = true }),
-      name = "Yml"
-    },
-    env = {
-      icon = "",
-      name = "Env"
-    },
     default = {
       icon = "",
       color = "#6F839E",
       name = "Default"
     },
+    lock = {
+      icon = "",
+      color = "#8BE9FD",
+      name = "lock"
+    },
+    sh = {
+      icon = "",
+      color = "#4d5a5e",
+      name = "Shell"
+    },
+    env = {
+      icon = "󰙪",
+      name = "Env"
+    },
     tmpl = {
-      icon =  material_icon.get_icon_by_filetype('yml', { default = true }),
+      icon = "󰈙",
       color = "#3970E4",
       name = "Template"
     },
     tpl = {
-      icon =  material_icon.get_icon_by_filetype('yml', { default = true }),
+      icon = "󰈙",
       color = "#3970E4",
       name = "Template"
     },
@@ -300,6 +295,16 @@ webdevicons.setup {
       icon = "󰄤",
       color = "#3BD9DD",
       name = "Cert"
-    }
+    },
+    yml = {
+      icon = "󰈙",
+      color = "#f44336",
+      name = "Yml",
+    },
+    yaml = {
+      icon = "󰈙",
+      color = "#f44336",
+      name = "Yaml",
+    },
   }
 }
