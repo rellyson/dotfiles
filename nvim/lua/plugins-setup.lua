@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'} -- tabs
   use 'folke/which-key.nvim' -- key binding helper
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'} -- bufferline
+  use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" } -- better diagnostics
 
   --useful plugins
   use 'tpope/vim-surround' -- replacement helper

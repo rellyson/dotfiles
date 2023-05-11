@@ -125,7 +125,7 @@ webdevicons.setup {
       name = "Golangci"
     },
     [".air.toml"] = {
-      icon = "󰖝",
+      icon = "󰀸",
       color = "#f2f2f2",
       name = "Air"
     },

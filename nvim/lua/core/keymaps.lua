@@ -45,3 +45,11 @@ keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', opts) -- close tab
 
 -- toggleterm
 keymap.set('n', '<C-j>', ':ToggleTerm<CR>', opts) -- open terminal
+
+-- trouble
+keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",opts)
+keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",opts)
+keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",opts)
+keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",opts)
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",opts)
