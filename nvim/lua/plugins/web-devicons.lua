@@ -337,6 +337,11 @@ webdevicons.setup {
       icon = "󱞎",
       color = "#afb42b",
       name = "Log",
+    },
+    out = {
+      icon = "󰜴",
+      color = "#3970b4",
+      name = "Out",
     }
   }
 }

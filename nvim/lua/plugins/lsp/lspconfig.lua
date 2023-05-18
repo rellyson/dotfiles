@@ -30,12 +30,12 @@ local on_attach = function(_, bufnr)
   keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
   -- configuration for helm
-  if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
-      vim.diagnostic.disable(bufnr)
-      vim.defer_fn(function()
-        vim.diagnostic.reset(nil, bufnr)
-      end, 1000)
-    end
+  if vim.bo[bufnr].filetype == "helm" then
+    vim.diagnostic.disable(bufnr)
+    vim.defer_fn(function()
+      vim.diagnostic.reset(nil, bufnr)
+    end, 1000)
+  end
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
