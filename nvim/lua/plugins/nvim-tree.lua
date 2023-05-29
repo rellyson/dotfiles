@@ -94,6 +94,18 @@ nvimtree.setup {
    indent_markers = {
      enable = true,
    },
+   special_files = {
+     "README.md",
+     "CHANGELOG.md",
+     "LICENSE",
+     "LICENSE.md",
+     "Makefile",
+     "package.json",
+     "Cargo.toml",
+     "go.mod",
+     "pyproject.toml",
+     "Dockerfile"
+   },
  },
   actions = {
     open_file = {
