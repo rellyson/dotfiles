@@ -108,6 +108,11 @@ lspconfig['gopls'].setup {
   on_attach = on_attach,
 }
 
+lspconfig['helm_ls'].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
 lspconfig['jsonls'].setup {
   settings = {
     json = {

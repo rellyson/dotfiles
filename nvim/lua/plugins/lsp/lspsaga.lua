@@ -13,4 +13,8 @@ saga.setup {
       normal_bg = "#022746",
     },
   },
+  lightbulb = {
+    enabled = false,
+    sign = false,
+  }
 }

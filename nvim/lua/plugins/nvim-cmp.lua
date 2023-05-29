@@ -39,8 +39,9 @@ cmp.setup {
   }),
   formatting = {
     format = lspkind.cmp_format({
+      mode = 'symbol',
+      ellipsis_char = '…',
       maxwidth = 50,
-      ellipsis_char = "...",
     }),
   },
   confirm_opts = {
@@ -52,5 +53,5 @@ cmp.setup {
   },
   experimental = {
     ghost_text = false,
-  }
+  },
 }

@@ -46,6 +46,10 @@ nvimtree.setup {
     },
     exclude = {
       ".gitignore",
+      ".gitmodules",
+      ".gitkeep",
+      ".gitattributes",
+      ".githooks",
     },
   },
   git = {
@@ -80,7 +84,7 @@ nvimtree.setup {
          unstaged = "",
          staged = "",
          unmerged = "",
-         renamed = "➜",
+         renamed = "",
          untracked = "",
          deleted = "",
          ignored = "",

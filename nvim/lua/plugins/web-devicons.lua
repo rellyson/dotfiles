@@ -16,12 +16,12 @@ webdevicons.setup {
   override_by_filename = {
      ["readme.md"] = {
        icon = "",
-       color = "#BD77DC",
+       color = "#69A3DF",
        name = "Readme"
      },
      ["changelog.md"] = {
-       icon = "",
-       color = "#BD77DC",
+       icon = "󰄴",
+       color = "#99BE77",
        name = "Changelog"
      },
      [".gitignore"] = {
@@ -75,8 +75,8 @@ webdevicons.setup {
       name = "EditorConfig",
     },
     [".shellcheckrc"] = {
-      icon =  "󰆍",
-      color = "#801013",
+      icon =  "",
+      color = "#7ACECE",
       name = "Shellcheck"
     },
     ["pyproject.toml"] = {
@@ -140,12 +140,13 @@ webdevicons.setup {
       name = "Jest"
     },
     [".prettierrc"] = {
-      icon = "󰫽",
+      icon = "󰬗",
+      color = "#e76d8e",
       name = "Prettier"
     },
     [".prettierignore"] = {
       icon = "󰬗",
-      color = "#CB2020",
+      color = "#e76d8e",
       name = "PrettierIgnore"
     },
     [".eslintrc.js"] = {
@@ -233,15 +234,20 @@ webdevicons.setup {
       color = "#AA04EE",
       name = "Credo",
     },
-    ["workspace.dsl"] = {
-      icon = "󰹗",
-      color = "#85bbf0",
-      name = "Structurizr",
+    [".yamllint"] = {
+      icon = "",
+      color = "#fbc02d",
+      name = "YamlLint",
     },
-    ["workspace.json"] = {
-      icon = "󰹗",
-      color = "#85bbf0",
-      name = "Structurizr",
+    [".yamllint.yml"] = {
+      icon = "",
+      color = "#fbc02d",
+      name = "YamlLint",
+    },
+    [".yamllint.yaml"] = {
+      icon = "",
+      color = "#fbc02d",
+      name = "YamlLint",
     }
   },
   override_by_extension = {
@@ -251,8 +257,8 @@ webdevicons.setup {
       name = "lock"
     },
     sh = {
-      icon = "",
-      color = "#4d5a5e",
+      icon = "",
+      color = "#f56b67",
       name = "Shell"
     },
     env = {
@@ -339,8 +345,8 @@ webdevicons.setup {
       name = "Log",
     },
     out = {
-      icon = "󰜴",
-      color = "#3970b4",
+      icon = "󱀹",
+      color = "#dadada",
       name = "Out",
     }
   }
