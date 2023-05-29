@@ -248,7 +248,32 @@ webdevicons.setup {
       icon = "",
       color = "#fbc02d",
       name = "YamlLint",
-    }
+    },
+    ["pre-commit"] = {
+      icon = "",
+      color = "#f56b67",
+      name = "GitHook"
+    },
+    ["post-commit"] = {
+      icon = "",
+      color = "#f56b67",
+      name = "GitHook"
+    },
+    ["pre-push"] = {
+      icon = "",
+      color = "#f56b67",
+      name = "GitHook"
+    },
+    ["pre-receive"] = {
+      icon = "",
+      color = "#f56b67",
+      name = "GitHook"
+    },
+    ["post-receive"] = {
+      icon = "",
+      color = "#f56b67",
+      name = "GitHook"
+    },
   },
   override_by_extension = {
     lock = {
