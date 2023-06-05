@@ -78,6 +78,8 @@ plugins=(
 	kubectl
 	nvm
 	python
+  pip
+  rust
 	terraform
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -93,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # Vagrant default engine
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
@@ -112,6 +114,8 @@ alias cl="clear"
 # spaceship opts
 SPACESHIP_USER_SHOW=always
 SPACESHIP_HOST_SHOW=always
+SPACESHIP_DOCKER_SYMBOL="󰡨 "
+SPACESHIP_DOCKER_COLOR="#2496ed"
 
 # sourcing scripts
 source "$HOME/.nvm/nvm.sh"

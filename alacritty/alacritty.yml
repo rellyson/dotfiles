@@ -21,14 +21,14 @@ font:
   bold_italic:
     family: Fira Code Nerd Font
     style: Bold Italic
-  size: 13
-  window:
-    padding:
-      x: 6
-      y: 2
-    opacity: 1.0
-    title: Terminal
-  cursor:
-    style: Block
-  mouse:
-    hide_when_typing: true
+  size: 12
+window:
+  padding:
+    x: 2
+    y: 0
+  opacity: 1.0
+  title: Alacritty
+cursor:
+  style: Block
+mouse:
+  hide_when_typing: true
