@@ -1,0 +1,8 @@
+k9s:
+  refreshRate: 3 # in seconds
+  enableMouse: true
+  noIcons: false
+  logger:
+    tail: 200
+    textWrap: true
+    showTime: true
