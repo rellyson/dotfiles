@@ -16,3 +16,4 @@ This repository contains dotfiles that I use in my daily workflow.
 - [tmux](https://github.com/tmux/tmux)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [git-delta](https://github.com/dandavison/delta)
+- [k9s](https://k9scli.io/)
