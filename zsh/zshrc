@@ -116,9 +116,15 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_HOST_SHOW=always
 SPACESHIP_DOCKER_SYMBOL="󰡨 "
 SPACESHIP_DOCKER_COLOR="#2496ed"
+SPACESHIP_VENV_SYMBOL="󱔎 "
 
 # sourcing scripts
 source "$HOME/.nvm/nvm.sh"
+
+# pyenv sourcing
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
