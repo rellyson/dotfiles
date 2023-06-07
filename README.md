@@ -17,3 +17,4 @@ This repository contains dotfiles that I use in my daily workflow.
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [git-delta](https://github.com/dandavison/delta)
 - [k9s](https://k9scli.io/)
+- [topgrade](https://github.com/topgrade-rs/topgrade)
