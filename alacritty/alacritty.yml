@@ -5,7 +5,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux"
+    - "tmux attach || tmux new -s local"
 import:
   - ~/.config/alacritty/colorscheme.yml
 font:

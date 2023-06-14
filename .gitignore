@@ -3,3 +3,4 @@ colors/*
 ftplugin/
 spell
 .luarc.json
+alacritty/colorscheme.yml

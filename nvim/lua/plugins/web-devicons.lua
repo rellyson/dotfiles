@@ -15,9 +15,9 @@ webdevicons.setup {
   },
   override_by_filename = {
      ["readme.md"] = {
-       icon = "",
-       color = "#69A3DF",
-       name = "Readme"
+      icon = "󰋼",
+      color = "#69a3df",
+      name = "Readme"
      },
      ["changelog.md"] = {
        icon = "󰄴",
@@ -80,7 +80,7 @@ webdevicons.setup {
       name = "Shellcheck"
     },
     ["pyproject.toml"] = {
-      icon = "",
+      icon = "",
       color = "#4B8DDE",
       name = "Pyproject"
     },
@@ -205,9 +205,9 @@ webdevicons.setup {
       name = "Cargo"
     },
     [".python-version"] = {
-      icon = "󱔎",
-      color = "#FFD43B",
-      name = "Python"
+      icon = "󰌠",
+      color = "#ffe873",
+      name = "PythonVersion"
     },
     ["mix.exs"] = {
       icon = "",
@@ -273,6 +273,31 @@ webdevicons.setup {
       icon = "",
       color = "#f56b67",
       name = "GitHook"
+    },
+    ["ruff.toml"] = {
+      icon = "󱐋",
+      color = "#fbc11a",
+      name = "Ruff"
+    },
+     [".ruff.toml"] = {
+      icon = "󱐋",
+      color = "#fbc11a",
+      name = "Ruff"
+    },
+    [".pre-commit-config.yaml"] = {
+      icon = "󰜘",
+      color = "#eda73d",
+      name = "PreCommit"
+    },
+    [".pre-commit-hooks.yaml"] = {
+      icon = "󰜘",
+      color = "#eda73d",
+      name = "PreCommitHook"
+    },
+    ["tox.ini"] = {
+      icon = "",
+      color = "#b5c761",
+      name = "Tox"
     },
   },
   override_by_extension = {
@@ -364,6 +389,11 @@ webdevicons.setup {
       color = "#ebebeb",
       name = "Puml",
     },
+    py = {
+      icon = "󰌠",
+      color = "#4b8dde",
+      name = "Python"
+    },
     log = {
       icon = "󱞎",
       color = "#afb42b",
@@ -373,6 +403,11 @@ webdevicons.setup {
       icon = "󱀹",
       color = "#dadada",
       name = "Out",
-    }
+    },
+    tmux = {
+      icon = "",
+      color = "#404042",
+      name = "Tmux",
+    },
   }
 }
