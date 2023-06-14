@@ -29,7 +29,7 @@ nvimtree.setup {
      icons = {
       hint = "󱩎",
       info = "",
-      warning = "",
+      warning = "󱈸",
       error = "",
     },
   },
@@ -81,8 +81,8 @@ nvimtree.setup {
          symlink_open = "",
        },
        git = {
-         unstaged = "",
-         staged = "",
+         unstaged = "",
+         staged = "",
          unmerged = "",
          renamed = "",
          untracked = "",
