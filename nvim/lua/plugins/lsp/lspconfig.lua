@@ -154,6 +154,19 @@ lspconfig['rust_analyzer'].setup {
 lspconfig['taplo'].setup {
   capabilities = capabilities,
   on_attach = on_attach,
+  settings = {
+    taplo = {
+      diagnostics = {
+        enable = true,
+      },
+      formatter = {
+        enable = true,
+      },
+      validation = {
+        enable = true,
+      },
+    },
+  },
 }
 
 lspconfig['terraformls'].setup {

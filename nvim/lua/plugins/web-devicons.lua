@@ -307,7 +307,7 @@ webdevicons.setup {
       name = "lock"
     },
     sh = {
-      icon = "",
+      icon = "",
       color = "#f56b67",
       name = "Shell"
     },
