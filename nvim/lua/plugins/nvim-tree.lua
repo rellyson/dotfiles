@@ -69,7 +69,7 @@ nvimtree.setup {
    icons = {
      webdev_colors = true,
      glyphs = {
-       symlink = "",
+       symlink = "",
        folder = {
          arrow_closed = "",
          arrow_open = "",
@@ -77,8 +77,8 @@ nvimtree.setup {
          open = "",
          empty = "",
          empty_open = "",
-         symlink = "",
-         symlink_open = "",
+         symlink = "",
+         symlink_open = "",
        },
        git = {
          unstaged = "",
@@ -106,6 +106,7 @@ nvimtree.setup {
      "pyproject.toml",
      "Dockerfile"
    },
+   symlink_destination = false,
  },
   actions = {
     open_file = {
