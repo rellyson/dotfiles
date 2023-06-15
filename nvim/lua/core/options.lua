@@ -1,4 +1,4 @@
-local opt = vim. opt --for conciseness
+local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.relativenumber = true
@@ -33,7 +33,7 @@ opt.syntax = 'enable'
 -- backspace
 opt.backspace = 'indent,eol,start'
 
---clipboard
+-- clipboard
 opt.clipboard:append('unnamedplus')
 
 -- window splitting
