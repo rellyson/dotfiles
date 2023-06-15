@@ -24,27 +24,24 @@ null_ls.setup {
     diagnostics.eslint,
     diagnostics.golangci_lint,
     diagnostics.shellcheck,
+    diagnostics.luacheck,
     diagnostics.markdownlint,
+    diagnostics.opacheck,
+    diagnostics.ruff,
     diagnostics.semgrep,
+    diagnostics.shellcheck,
     diagnostics.terraform_validate,
     diagnostics.tfsec,
     diagnostics.yamllint,
-    diagnostics.pylint,
     formatting.isort,
-    formatting.black,
-    formatting.clang_format,
-    formatting.codespell,
     formatting.eslint,
     formatting.gofmt,
     formatting.goimports,
+    formatting.lua_format,
     formatting.mix,
     formatting.packer,
-    formatting.prettier,
-    formatting.rego,
     formatting.rustfmt,
-    formatting.shfmt,
     formatting.terraform_fmt,
-    formatting.yamlfmt,
   },
   on_attach = function(current_client, bufnr)
     if current_client.supports_method("textDocument/formatting") then
@@ -55,7 +52,7 @@ null_ls.setup {
         callback = function()
           vim.lsp.buf.format({
             filter = function(client)
-              --  only use null-ls for formatting instead of lsp server
+              --  null-ls for formatting instead of lsp server
               return client.name == "null-ls"
             end,
             bufnr = bufnr,
