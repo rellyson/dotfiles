@@ -17,5 +17,7 @@ This repository contains dotfiles that I use in my daily workflow.
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [git-delta](https://github.com/dandavison/delta)
 - [k9s](https://k9scli.io/)
+- [nvm](https://github.com/nvm-sh/nvm)
+- [pyenv](https://github.com/pyenv/pyenv)
 - [topgrade](https://github.com/topgrade-rs/topgrade)
 - [NerdFonts](https://www.nerdfonts.com/)
