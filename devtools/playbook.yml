@@ -1,0 +1,34 @@
+---
+- name: devtools setup
+  hosts: localhost
+  tasks:
+    - name: install system packages
+      become: true
+      package:
+        state: present
+        name: 
+          - openssl
+          - openssl-devel
+          - zlib 
+          - zlib-devel
+          - bzip2-devel
+          - ncurses-devel
+          - libffi
+          - libffi-devel
+          - readline
+          - readline-devel
+          - sqlite
+          - sqlite-devel
+          - tk 
+          - tk-devel
+    - name: install pyenv
+      shell: curl https://pyenv.run | bash
+      args:
+        executable: /bin/bash
+      ignore_errors: true
+    - name: install nvm
+      shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+      args:
+        executable: /bin/bash
+      ignore_errors: true
+
