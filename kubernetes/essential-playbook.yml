@@ -1,0 +1,48 @@
+---
+- name: Essential k8s setup
+  hosts: localhost
+  tasks:
+    - name: Create temporary dir
+      ansible.builtin.file:
+        path: /tmp/k8s-install
+        state: directory
+        mode: 0700
+
+    - name: Install kubectl
+      become: true
+      ansible.builtin.shell:
+        chdir: /tmp/k8s-install
+        cmd: |
+          curl -LO \
+          "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          mv ./kubectl /usr/local/bin/kubectl
+      args:
+        executable: /bin/sh
+
+    - name: Install helm
+      ansible.builtin.shell:
+        cmd: |
+          curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+      args:
+        executable: /bin/bash
+
+    - name: Git clone kubens/kubectx repo
+      ansible.builtin.git:
+        repo: https://github.com/ahmetb/kubectx
+        dest: /tmp/k8s-install/kubectx
+        clone: true
+    - name: Set kubens/kubectx binaries
+      become: true
+      ansible.builtin.shell:
+        chdir: /tmp/k8s-install/kubectx
+        cmd: |
+          mv ./kubectx /usr/local/bin
+          mv ./kubens /usr/local/bin
+      args:
+        executable: /bin/sh
+
+    - name: Clean temporary dir
+      ansible.builtin.file:
+        path: /tmp/k8s-install
+        state: absent

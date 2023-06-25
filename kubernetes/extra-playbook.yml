@@ -1,0 +1,17 @@
+---
+- name: Extra k8s setup
+  hosts: localhost
+  tasks:
+    - name: Install k3d
+      ansible.builtin.shell:
+        cmd: |
+          curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+      args:
+        executable: /bin/bash
+
+    - name: Install gefyra
+      ansible.builtin.shell:
+        cmd: |
+          curl -sSL https://raw.githubusercontent.com/gefyrahq/gefyra/main/install.sh | sh -
+      args:
+        executable: /bin/sh
