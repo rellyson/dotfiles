@@ -32,6 +32,7 @@
         repo: https://github.com/ahmetb/kubectx
         dest: /tmp/k8s-install/kubectx
         clone: true
+
     - name: Set kubens/kubectx binaries
       become: true
       ansible.builtin.shell:

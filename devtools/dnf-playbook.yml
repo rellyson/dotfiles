@@ -29,6 +29,7 @@
           - erlang
           - elixir
           - lua
+          - lua-devel
           - java-openjdk-headless
           - rust
           - docker-ce
