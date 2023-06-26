@@ -4,3 +4,4 @@ ftplugin/
 spell
 .luarc.json
 alacritty/colorscheme.yml
+inventory.ini

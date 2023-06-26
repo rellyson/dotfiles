@@ -30,15 +30,12 @@
         cmd: curl https://pyenv.run | bash
       args:
         executable: /bin/bash
-      ignore_errors: true
 
     - name: Install nvm
       ansible.builtin.shell:
         cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
       args:
         executable: /bin/bash
-      ignore_errors: true
-
 
     - name: Unarchive luarocks
       ansible.builtin.unarchive:

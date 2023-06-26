@@ -15,3 +15,20 @@
           curl -sSL https://raw.githubusercontent.com/gefyrahq/gefyra/main/install.sh | sh -
       args:
         executable: /bin/sh
+
+    - name: Install k9s
+      ansible.builtin.unarchive:
+        src: https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
+        dest: /usr/bin
+        list_files: true
+        remote_src: true
+        extra_opts:
+          - "--add-file"
+          - "k9s"
+
+    - name: Get transparent skin for k9s
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/derailed/k9s/master/skins/transparent.yml
+        dest: "{{ ansible_env.HOME }}/.config/k9s/skin.yml"
+        force: true
+        mode: 0644
