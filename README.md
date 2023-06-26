@@ -15,6 +15,9 @@ This repository contains dotfiles that I use in my daily workflow.
 All dotfiles are followed by a `playbook.yml` file. You can use it by running one of the commands below:
 
 ```sh
+# Install extra roles via ansible-galaxy
+ansible-galaxy install -r requirements.yml
+
 # Using a inventory file
 ansible-playbook <playbook-file> -i <inventory-file>
 

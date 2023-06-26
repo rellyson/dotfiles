@@ -150,7 +150,23 @@ webdevicons.setup {
             color = "#eda73d",
             name = "PreCommitHook"
         },
-        ["tox.ini"] = {icon = "", color = "#b5c761", name = "Tox"}
+        ["tox.ini"] = {icon = "", color = "#b5c761", name = "Tox"},
+        ["playbook.yml"] = {
+            icon = "󱂚",
+            color = "#dadada",
+            name = "AnsiblePlaybook"
+        },
+        ["requirements.yml"] = {
+            icon = "󱂚",
+            color = "#dadada",
+            name = "AnsibleRequirements"
+        },
+        ["ansible.cfg"] = {
+            icon = "",
+            color = "#eb3500",
+            name = "AnsibleConfig"
+        },
+        ["hosts"] = {icon = "", color = "#bbbbbb", name = "Hosts"}
     },
     override_by_extension = {
         lock = {icon = "", color = "#eb4034", name = "lock"},
