@@ -1,0 +1,15 @@
+---
+- name: Topgrade setup
+  hosts: localhost
+  tasks:
+    - name: Install topgrade
+      ansible.builtin.shell:
+        cmd: cargo install topgrade
+      args:
+        executable: /bin/bash
+
+    - name: Link topgrade config
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/topgrade.toml"
+        dest: "{{ ansible_env.HOME }}/.config/topgrade.toml"
+        state: "link"
