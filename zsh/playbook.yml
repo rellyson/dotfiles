@@ -1,0 +1,42 @@
+---
+- name: ZSH setup
+  hosts: localhost
+  tasks:
+    - name: Install zsh
+      become: true
+      ansible.builtin.package:
+        name: zsh
+        state: present
+
+    - name: Install oh-my-zsh
+      ansible.builtin.shell:
+        cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      args:
+        executable: /bin/sh
+
+    - name: Install autosuggestions plugin
+      ansible.builtin.git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions.git
+        dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+    - name: Install syntax highlighting plugin
+      ansible.builtin.git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+    - name: Clone spaceship theme
+      ansible.builtin.git:
+        repo: https://github.com/spaceship-prompt/spaceship-prompt.git
+        dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/spaceship-prompt"
+        depth: 1
+
+    - name: Link spaceship theme file
+      ansible.builtin.file:
+        src: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme"
+        dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+    - name: Link zshrc file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/zshrc"
+        dest: "{{ ansible_env.HOME }}/.zshrc"
+        state: "link"
