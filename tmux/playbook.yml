@@ -1,0 +1,20 @@
+---
+- name: Tmux setup
+  hosts: localhost
+  tasks:
+    - name: Install tmux
+      become: true
+      ansible.builtin.package:
+        name: tmux
+        state: present
+
+    - name: Install TPM via git
+      ansible.builtin.git:
+        repo: https://github.com/tmux-plugins/tpm.git
+        dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm"
+
+    - name: Link config file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/tmux.conf"
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
+        state: link
