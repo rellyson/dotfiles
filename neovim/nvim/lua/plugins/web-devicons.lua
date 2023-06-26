@@ -171,7 +171,7 @@ webdevicons.setup {
         drawio = {icon = "", color = "#f08705", name = "Drawio"},
         puml = {icon = "󰈏", color = "#ebebeb", name = "Puml"},
         pu = {icon = "󰈏", color = "#ebebeb", name = "Puml"},
-        py = {icon = "󰌠", color = "#4b8dde", name = "Python"},
+        py = {icon = "󰌠", color = "#ffd43b", name = "Python"},
         log = {icon = "󱞎", color = "#afb42b", name = "Log"},
         out = {icon = "󱀹", color = "#dadada", name = "Out"},
         tmux = {icon = "", color = "#404042", name = "Tmux"}

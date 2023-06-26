@@ -40,10 +40,22 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true -- ena
 
 lspconfig['ansiblels'].setup {
     settings = {
-        ansible = {
-            executionEnvironment = {enabled = true, containerEngine = 'auto'},
-            validation = {enabled = true}
+      ansible = {
+        path = "ansible"
+      },
+      executionEnvironment = {
+        enabled = false
+      },
+      python = {
+        interpreterPath = "python"
+      },
+      validation = {
+        enabled = true,
+        lint = {
+          enabled = true,
+          path = "ansible-lint"
         }
+      }
     },
     capabilities = capabilities,
     on_attach = on_attach

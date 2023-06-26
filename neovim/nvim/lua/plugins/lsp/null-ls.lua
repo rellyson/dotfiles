@@ -14,9 +14,9 @@ null_ls.setup {
         completion.spell, diagnostics.ansiblelint, diagnostics.codespell,
         diagnostics.cpplint, diagnostics.credo, diagnostics.dotenv_linter,
         diagnostics.eslint, diagnostics.golangci_lint, diagnostics.shellcheck,
-        diagnostics.luacheck, diagnostics.markdownlint, diagnostics.opacheck,
-        diagnostics.ruff, diagnostics.semgrep, diagnostics.shellcheck,
-        diagnostics.terraform_validate, diagnostics.tfsec, diagnostics.yamllint,
+        diagnostics.luacheck, diagnostics.opacheck,diagnostics.ruff,
+        diagnostics.semgrep, diagnostics.shellcheck,diagnostics.terraform_validate,
+        diagnostics.tfsec, diagnostics.yamllint,
         formatting.isort, formatting.eslint, formatting.gofmt,
         formatting.goimports, formatting.lua_format, formatting.mix,
         formatting.packer, formatting.rustfmt, formatting.terraform_fmt

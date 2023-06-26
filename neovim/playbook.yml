@@ -1,0 +1,9 @@
+---
+- name: Neovim install
+  hosts: localhost
+  tasks:
+    - name: Copy nvim to config
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/nvim"
+        dest: $HOME/.config/nvim
+        state: link
