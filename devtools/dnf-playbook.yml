@@ -1,0 +1,42 @@
+---
+- name: dnf development tools
+  hosts: localhost
+  tasks:
+    - name: Add docker repository
+      become: true
+      ansible.builtin.shell:
+        cmd: dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+      args:
+        executable: /bin/sh
+
+    - name: Install 'Development tools' package group
+      become: true
+      ansible.builtin.dnf:
+        name: '@Development tools'
+        state: present
+
+    - name: Install languages/packages
+      become: true
+      ansible.builtin.dnf:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+          - dnf-plugins-core
+          - cargo
+          - gcc
+          - golang
+          - erlang
+          - elixir
+          - lua
+          - java-openjdk-headless
+          - rust
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+
+    - name: Enable docker daemon
+      become: true
+      ansible.builtin.systemd:
+        name: docker
+        enabled: true
