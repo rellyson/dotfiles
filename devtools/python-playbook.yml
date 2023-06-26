@@ -1,0 +1,19 @@
+---
+- name: Python playbook
+  hosts: localhost
+  tasks:
+    - name: Install python development tools
+      ansible.builtin.pip:
+        name:
+          - yamllint
+          - pre-commit
+          - ruff
+        extra_args: --user
+        state: present
+
+    - name: Link yamllint config
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/config/yamllint"
+        dest: "{{ ansible_env.HOME }}/.config/yamllint/config"
+        state: "link"
+        force: true
