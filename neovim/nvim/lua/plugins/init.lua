@@ -16,6 +16,7 @@ require('plugins.autopairs')
 require('plugins.copilot')
 require('plugins.colorizer')
 require('plugins.comment')
+require('plugins.todo')
 require('plugins.toggleterm')
 require('plugins.markdown-preview')
 

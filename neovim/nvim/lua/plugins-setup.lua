@@ -78,6 +78,7 @@ return packer.startup(function(use)
     }
     use 'NvChad/nvim-colorizer.lua' -- colorizer
     use 'yamatsum/nvim-cursorline' -- cursor highlight
+    use 'folke/todo-comments.nvim' -- highlight TODOs
     use {'iamcco/markdown-preview.nvim', run = "cd app && npm install"} -- markdown preview
 
     -- autocompletion

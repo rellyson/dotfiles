@@ -26,6 +26,8 @@
           - gcc
           - libevent-devel
           - git-delta
+          - ripgrep
+          - fzf
 
     - name: Install pyenv
       ansible.builtin.shell:
