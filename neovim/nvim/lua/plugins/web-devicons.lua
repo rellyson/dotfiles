@@ -21,14 +21,22 @@ webdevicons.setup {
         },
         ["go.mod"] = {icon = "", color = "#00ADD8", name = "Gomod"},
         ["go.sum"] = {icon = "", color = "#ec407a", name = "Gosum"},
-        ["chart.yaml"] = {icon = "⎈", color = "#4B8BBE", name = "helm"},
-        ["values.yaml"] = {icon = "⎈", color = "#4B8BBE", name = "helm"},
-        ["values.schema.json"] = {
-            icon = "⎈",
-            color = "#4B8BBE",
-            name = "helm"
+        ["chart.yaml"] = {icon = "󰠳", color = "#52809E", name = "HelmChart"},
+        ["values.yaml"] = {
+            icon = "󰠳",
+            color = "#52809E",
+            name = "HelmValues"
         },
-        [".helmignore"] = {icon = "⎈", color = "#4B8BBE", name = "helm"},
+        ["values.schema.json"] = {
+            icon = "󰠳",
+            color = "#52809E",
+            name = "HelmValues"
+        },
+        [".helmignore"] = {
+            icon = "󰠳",
+            color = "#F14C2B",
+            name = "HelmIgnore"
+        },
         [".editorconfig"] = {
             icon = "",
             color = "#6F839E",
