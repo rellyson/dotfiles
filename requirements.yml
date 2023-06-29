@@ -1,4 +1,5 @@
 # More info: https://galaxy.ansible.com/docs/using/installing.html#installing-multiple-roles-from-a-file
 
 # community general
-src: community.general
+- name: Community
+  src: community.general
