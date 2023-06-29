@@ -77,8 +77,8 @@ plugins=(
 	kubectl
 	nvm
 	python
-  pip
-  rust
+        pip
+        rust
 	terraform
 	zsh-autosuggestions
 	zsh-syntax-highlighting
