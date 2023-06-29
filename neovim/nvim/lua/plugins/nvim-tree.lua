@@ -33,7 +33,7 @@ nvimtree.setup {
         },
         exclude = {
             ".gitignore", ".gitmodules", ".gitkeep", ".gitattributes",
-            ".githooks"
+            ".githooks", ".gitconfig"
         }
     },
     git = {enable = true, ignore = false, show_on_dirs = true},
