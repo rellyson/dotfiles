@@ -34,6 +34,7 @@
       ansible.builtin.file:
         src: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme"
         dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+        state: "link"
 
     - name: Link zshrc file
       ansible.builtin.file:
