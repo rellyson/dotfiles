@@ -196,9 +196,10 @@ webdevicons.setup {
         puml = {icon = "󰈏", color = "#ebebeb", name = "Puml"},
         pu = {icon = "󰈏", color = "#ebebeb", name = "Puml"},
         py = {icon = "󰌠", color = "#ffd43b", name = "Python"},
+        rego = {icon = "", color = "#7d9199", name = "Rego"},
         log = {icon = "󱞎", color = "#afb42b", name = "Log"},
         out = {icon = "󱀹", color = "#dadada", name = "Out"},
         tmux = {icon = "", color = "#404042", name = "Tmux"},
-        theme = {icon = "", color = "#cc7d6e", name= "Theme"}
+        theme = {icon = "", color = "#cc7d6e", name = "Theme"}
     }
 }
