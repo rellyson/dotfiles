@@ -28,6 +28,7 @@ window:
     y: 0
   opacity: 1.0
   title: Alacritty
+  startup_mode: Maximized
 cursor:
   style: Block
 mouse:
