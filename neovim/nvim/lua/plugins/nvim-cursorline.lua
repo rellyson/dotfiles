@@ -1,7 +1,17 @@
-local setup, cursorline = pcall(require, 'nvim-cursorline')
-if not setup then return end
+-- luacheck: globals vim
+return {
+    "yamatsum/nvim-cursorline",
+    config = function()
+        local setup, cursorline = pcall(require, 'nvim-cursorline')
+        if not setup then return end
 
-cursorline.setup {
-    cursorline = {enable = true, timeout = 1000, number = false},
-    cursorword = {enable = true, min_length = 3, hl = {underline = true}}
+        cursorline.setup {
+            cursorline = {enable = true, timeout = 1000, number = false},
+            cursorword = {
+                enable = true,
+                min_length = 3,
+                hl = {underline = true}
+            }
+        }
+    end
 }

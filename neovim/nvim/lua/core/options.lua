@@ -1,5 +1,9 @@
 local opt = vim.opt -- for conciseness
 
+-- set leader key as space
+vim.g.mapleader = ' '
+vim.g.maplocaleader = ' '
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
