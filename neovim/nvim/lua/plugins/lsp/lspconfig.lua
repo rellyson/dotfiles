@@ -40,22 +40,13 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true -- ena
 
 lspconfig['ansiblels'].setup {
     settings = {
-      ansible = {
-        path = "ansible"
-      },
-      executionEnvironment = {
-        enabled = false
-      },
-      python = {
-        interpreterPath = "python"
-      },
-      validation = {
-        enabled = true,
-        lint = {
-          enabled = true,
-          path = "ansible-lint"
+        ansible = {path = "ansible"},
+        executionEnvironment = {enabled = false},
+        python = {interpreterPath = "python"},
+        validation = {
+            enabled = true,
+            lint = {enabled = true, path = "ansible-lint"}
         }
-      }
     },
     capabilities = capabilities,
     on_attach = on_attach
@@ -166,11 +157,7 @@ lspconfig['yamlls'].setup {
                 enable = true,
                 url = 'https://www.schemastore.org/api/json/catalog.json'
             },
-            schemas = {
-                ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.26.0/all.json"] = {
-                    '**/kube*/*.yaml', '**/k8s*/*.yaml'
-                }
-            }
+            schemas = require('schemastore').yaml.schemas()
         }
     },
     capabilities = capabilities,
