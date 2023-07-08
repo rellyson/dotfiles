@@ -1,7 +1,9 @@
 -- luacheck: globals vim
 return {
     "williamboman/mason.nvim",
-    dependencies = {"williamboman/mason-lspconfig.nvim"},
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim", "jay-babu/mason-null-ls.nvim"
+    },
     config = function()
         local mason_status, mason = pcall(require, "mason")
         if not mason_status then return end
@@ -18,6 +20,13 @@ return {
             "tflint", "terraformls", "rust_analyzer", "sqlls", "yamlls"
         }
 
+        -- which formatters should be installed
+        local null_ls = {
+            "yamllint", "yamlfmt", "luacheck", "luaformatter", "terraform_fmt",
+            "shfmt", "codespell", "goimports", "golangci_lint", "prettier",
+            "ruff"
+        }
+
         -- mason setup
         mason.setup()
 
@@ -26,5 +35,12 @@ return {
             ensure_installed = servers,
             automatic_installation = true
         }
+
+        -- mason null-ls setup
+        require("mason-null-ls").setup({
+            ensure_installed = null_ls,
+            automatic_installation = true
+        })
+
     end
 }

@@ -2,31 +2,25 @@
 return {
     "romgrk/barbar.nvim", -- tabs
     lazy = false,
-    priority = 990,
+    priority = 10,
     dependencies = {
-        "nvim-tree/nvim-web-devicons" -- icons
+        "nvim-tree/nvim-web-devicons", -- icons
+        "lewis6991/gitsigns.nvim" -- git status
     },
-    config = function()
-        local setup, barbar = pcall(require, "barbar")
-        if not setup then return end
-
-        vim.cmd([[ highlight BufferTabpageFill guibg=#120d17 ]])
-
-        vim.g.barbar_auto_setup = false
-
-        barbar.setup {
-            animation = false,
-            auto_hide = true,
-            clickable = true,
-            sidebar_filetypes = {NvimTree = true},
-            icons = {
-                gitsigns = {
-                    added = {enabled = true, icon = '+'},
-                    changed = {enabled = true, icon = '~'},
-                    deleted = {enabled = true, icon = '-'}
-                },
-                filetype = {enabled = true}
-            }
-        }
-    end
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+        animation = false,
+        auto_hide = true,
+        clickable = true,
+        sidebar_filetypes = {NvimTree = true},
+        icons = {
+            gitsigns = {
+                added = {enabled = true, icon = '+'},
+                changed = {enabled = true, icon = '~'},
+                deleted = {enabled = true, icon = '-'}
+            },
+            filetype = {enabled = true}
+        },
+        no_name_title = nil
+    }
 }

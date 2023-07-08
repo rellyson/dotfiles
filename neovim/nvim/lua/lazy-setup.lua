@@ -1,4 +1,1 @@
-require("lazy").setup({
-    {"tpope/vim-fugitive", lazy = true}, -- git commands
-    {import = "plugins"}, {import = "plugins.lsp"}
-})
+require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}})

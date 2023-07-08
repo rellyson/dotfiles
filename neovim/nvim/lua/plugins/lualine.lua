@@ -2,7 +2,8 @@
 return {
     "nvim-lualine/lualine.nvim", -- statusline
     dependencies = {"folke/noice.nvim"},
-    build = function()
+    lazy = false,
+    config = function()
         local setup, lualine = pcall(require, 'lualine')
         if not setup then return end
 

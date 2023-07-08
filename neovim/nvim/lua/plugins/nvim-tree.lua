@@ -2,9 +2,26 @@
 return {
     "nvim-tree/nvim-tree.lua",
     lazy = false,
-    priority = 900,
     dependencies = {"nvim-tree/nvim-web-devicons"},
     config = function()
+        -- recommended settings
+        vim.g.loaded = 1
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
+
+        vim.cmd([[ highlight NvimTreeFolderName guifg=#aeafda ]])
+        vim.cmd([[ highlight NvimTreeOpenedFolderName guifg=#aeafda ]])
+        vim.cmd([[ highlight NvimTreeEmptyFolderName guifg=#aeafda ]])
+
+        vim.cmd([[ highlight NvimTreeFolderIcon guifg=#8788ab ]])
+        vim.cmd([[ highlight NvimTreeIndentMarker guifg=#6f708f ]])
+
+        vim.cmd([[ highlight NvimTreeFileNew guifg=#6fa868 ]])
+        vim.cmd([[ highlight NvimTreeFileStaged guifg=#6fa868 ]])
+        vim.cmd([[ highlight NvimTreeFileDirty guifg=#948f6d ]])
+        vim.cmd([[ highlight NvimTreeFileDeleted guifg=#c14a4a ]])
+        vim.cmd([[ highlight NvimTreeFileIgnored guifg=#6F839E ]])
+
         local setup, nvimtree = pcall(require, 'nvim-tree')
         if not setup then return end
 
@@ -88,24 +105,5 @@ return {
         end
 
         vim.api.nvim_create_autocmd({"VimEnter"}, {callback = open_nvim_tree})
-    end,
-    init = function()
-        -- recommended settings
-        vim.g.loaded = 1
-        vim.g.loaded_netrw = 1
-        vim.g.loaded_netrwPlugin = 1
-
-        vim.cmd([[ highlight NvimTreeFolderName guifg=#aeafda ]])
-        vim.cmd([[ highlight NvimTreeOpenedFolderName guifg=#aeafda ]])
-        vim.cmd([[ highlight NvimTreeEmptyFolderName guifg=#aeafda ]])
-
-        vim.cmd([[ highlight NvimTreeFolderIcon guifg=#8788ab ]])
-        vim.cmd([[ highlight NvimTreeIndentMarker guifg=#6f708f ]])
-
-        vim.cmd([[ highlight NvimTreeFileNew guifg=#6fa868 ]])
-        vim.cmd([[ highlight NvimTreeFileStaged guifg=#6fa868 ]])
-        vim.cmd([[ highlight NvimTreeFileDirty guifg=#948f6d ]])
-        vim.cmd([[ highlight NvimTreeFileDeleted guifg=#c14a4a ]])
-        vim.cmd([[ highlight NvimTreeFileIgnored guifg=#6F839E ]])
     end
 }

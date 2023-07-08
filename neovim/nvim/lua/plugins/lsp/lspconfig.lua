@@ -1,6 +1,7 @@
 -- luacheck: globals vim
 return {
     "neovim/nvim-lspconfig",
+    event = {"BufReadPre", "BufNewFile", "BufWritePre"},
     dependencies = {"hrsh7th/cmp-nvim-lsp", "b0o/schemastore.nvim"},
     config = function()
         local lspconfig_status, lspconfig = pcall(require, "lspconfig")

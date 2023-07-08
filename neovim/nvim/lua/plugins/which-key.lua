@@ -1,7 +1,7 @@
 -- luacheck: globals vim
 return {
     "folke/which-key.nvim", -- which-key
-    build = function()
+    config = function()
         local setup, whick_key = pcall(require, "which-key")
         if not setup then return end
 
