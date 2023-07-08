@@ -1,6 +1,8 @@
 -- luacheck: globals vim
 return {
     'nvim-treesitter/nvim-treesitter', -- syntax-highlight
+    lazy = true,
+    event = {"BufReadPre", "BufNewFile", "BufWritePre"},
     build = function()
         local ts_update = require('nvim-treesitter.install').update({
             with_sync = true

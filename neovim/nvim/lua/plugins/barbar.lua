@@ -1,8 +1,8 @@
 -- luacheck: globals vim
 return {
     "romgrk/barbar.nvim", -- tabs
-    lazy = false,
-    priority = 10,
+    event = "VimEnter",
+    lazy = true,
     dependencies = {
         "nvim-tree/nvim-web-devicons", -- icons
         "lewis6991/gitsigns.nvim" -- git status

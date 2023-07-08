@@ -1,6 +1,8 @@
 -- luacheck: globals vim
 return {
     "hrsh7th/nvim-cmp", -- completion,
+    lazy = true,
+    event = {"BufReadPre", "BufNewFile", "BufWritePre"},
     dependencies = {
         "L3MON4D3/LuaSnip", -- snippets
         "saadparwaiz1/cmp_luasnip", -- snippets
