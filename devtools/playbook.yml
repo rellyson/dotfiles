@@ -9,26 +9,20 @@
         state: present
         name:
           - openssl
-          - openssl-devel
           - zlib
-          - zlib-devel
-          - bzip2-devel
-          - ncurses-devel
+          - bzip2
+          - ncurses
           - libffi
-          - libffi-devel
           - readline
-          - readline-devel
           - sqlite
-          - sqlite-devel
           - tk
-          - tk-devel
           - make
           - cmake
           - gcc
-          - libevent-devel
           - git-delta
           - ripgrep
           - fzf
+          - meld
 
     - name: Install pyenv
       ansible.builtin.shell:
