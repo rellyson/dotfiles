@@ -15,7 +15,6 @@ return {
         null_ls.setup {
             debug = false,
             sources = {
-                code_actions.gitsigns, code_actions.refactoring,
                 completion.luasnip, completion.spell, diagnostics.ansiblelint,
                 diagnostics.codespell, diagnostics.cpplint, diagnostics.credo,
                 diagnostics.dotenv_linter, diagnostics.eslint,

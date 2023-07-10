@@ -1,5 +1,10 @@
 -- luacheck: globals vim
 return {
     "NvChad/nvim-colorizer.lua", -- colorizer
-    config = function() require("colorizer").setup() end
+    opts = {
+        filetypes = {
+            "css", "javascript", "html", "typescript", "lua", "yaml", "json",
+            "markdown"
+        }
+    }
 }
