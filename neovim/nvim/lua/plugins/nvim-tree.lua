@@ -44,7 +44,7 @@ return {
                 },
                 exclude = {
                     ".gitignore", ".gitmodules", ".gitkeep", ".gitattributes",
-                    ".githooks", ".gitconfig"
+                    ".githooks", ".gitconfig", ".github"
                 }
             },
             git = {enable = true, ignore = false, show_on_dirs = true},
