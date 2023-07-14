@@ -250,6 +250,8 @@ return {
             ["hosts"] = {icon = "", color = "#bbbbbb", name = "Hosts"}
         },
         override_by_extension = {
+            ad = {icon = "A", color = "#e84033", name = "Adoc"},
+            adoc = {icon = "A", color = "#e84033", name = "Adoc"},
             lock = {icon = "", color = "#eb4034", name = "lock"},
             sh = {icon = "", color = "#f56b67", name = "Shell"},
             env = {icon = "󰙪", name = "Env"},
