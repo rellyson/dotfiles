@@ -16,7 +16,6 @@ extlist=(
   hediet.vscode-drawio
   usernamehw.errorlens
   aaron-bond.better-comments
-  coenraads.bracket-pair-colorizer
 )
 
 for ext in "${extlist[@]}"; do

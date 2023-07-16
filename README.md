@@ -39,3 +39,4 @@ ansible-playbook <playbook-file> --ask-become-pass
 - [pyenv](https://github.com/pyenv/pyenv)
 - [topgrade](https://github.com/topgrade-rs/topgrade)
 - [NerdFonts](https://www.nerdfonts.com/)
+- [VSCodium](https://vscodium.com/)
