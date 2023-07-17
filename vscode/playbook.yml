@@ -10,3 +10,7 @@
         src: "{{ playbook_dir }}/settings.json"
         dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/settings.json"
         state: "link"
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/vsicons-custom-icons"
+        dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/vsicons-custom-icons"
+        state: "link"

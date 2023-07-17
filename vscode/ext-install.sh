@@ -9,6 +9,7 @@ extlist=(
   ms-azuretools.vscode-docker
   redhat.vscode-yaml
   redhat.vscode-xml
+  redhat.ansible
   asciidoctor.asciidoctor-vscode
   github.github-vscode-theme
   zguolee.tabler-icons
@@ -17,6 +18,7 @@ extlist=(
   hediet.vscode-drawio
   usernamehw.errorlens
   aaron-bond.better-comments
+  tamasfe.even-better-toml
 )
 
 for ext in "${extlist[@]}"; do

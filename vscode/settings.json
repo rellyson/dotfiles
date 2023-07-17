@@ -1,43 +1,84 @@
 {
-    "workbench.tips.enabled": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-    "workbench.productIconTheme": "Tabler",
-    "workbench.colorCustomizations": {
-      "statusBar.foreground": "#010409",
-      "statusBar.background": "#89B4FA",
-      "statusBar.noFolderBackground": "#89B4FA",
-      "statusBar.debuggingBackground": "#89B4FA"
+  "workbench.tips.enabled": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.productIconTheme": "Tabler",
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#010409",
+    "statusBar.background": "#89B4FA",
+    "statusBar.noFolderBackground": "#89B4FA",
+    "statusBar.debuggingBackground": "#89B4FA"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.fontFamily": "'Fira Code Nerd Font', 'monospace'",
+  "editor.cursorStyle": "block",
+  "editor.autoClosingBrackets": "always",
+  "editor.fontLigatures": true,
+  "editor.codeLens": false,
+  "window.zoomLevel": 0.3,
+  "explorer.expandSingleFolderWorkspaces": false,
+  "explorer.compactFolders": false,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "files.associations": {
+    "*plays.yml": "ansible"
+  },
+  "terminal.external.linuxExec": "/bin/zsh",
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.titleBarStyle": "custom",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.enableNeovim": true,
+  "vim.shell": "/bin/zsh",
+  "vim.leader": "' '",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": "#89B4FA",
+  "vim.statusBarColors.insert": "#A6E3A1",
+  "vim.statusBarColors.replace": "#F38BA8",
+  "vim.statusBarColors.commandlineinprogress": "#FAB387",
+  "vim.statusBarColors.visualblock": "#CBA6F7",
+  "vim.statusBarColors.visualline": "#CBA6F7",
+  "vim.statusBarColors.searchinprogressmode": "#FAB387",
+  "editor.fontSize": 15,
+  "code-runner.clearPreviousOutput": true,
+  "hediet.vscode-drawio.theme": "dark",
+  "yaml.validate": false,
+  "yaml.completion": true,
+  "redhat.telemetry.enabled": false,
+  "vsicons.associations.files": [
+    {
+      "icon": "python",
+      "extensions": [
+        ".python-version",
+        "pyproject.toml"
+      ]
     },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs":"active",
-    "editor.fontFamily": "'Fira Code Nerd Font', 'monospace'",
-    "editor.cursorStyle": "block",
-    "editor.autoClosingBrackets": "always",
-    "editor.fontLigatures": true,
-    "editor.codeLens": false,
-    "files.exclude": {
-        "**/_pycache_": true
+    {
+      "icon": "yamllint",
+      "extensions": [
+        ".yamllint.yml",
+        "yamllint.yml"
+      ]
     },
-    "vsicons.dontShowNewVersionMessage": true,
-    "window.menuBarVisibility": "hidden",
-    "window.titleBarStyle": "custom",
-    "vim.cursorStylePerMode.insert": "line",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.enableNeovim": true,
-    "vim.leader": "' '",
-    "vim.smartRelativeLine": true,
-    "vim.statusBarColorControl": true,
-    "vim.useSystemClipboard": true,
-    "vim.statusBarColors.normal": "#89B4FA",
-    "vim.statusBarColors.insert": "#A6E3A1",
-    "vim.statusBarColors.replace": "#F38BA8",
-    "vim.statusBarColors.commandlineinprogress": "#FAB387",
-    "vim.statusBarColors.visualblock": "#CBA6F7",
-    "vim.statusBarColors.visualline": "#CBA6F7",
-    "vim.statusBarColors.searchinprogressmode": "#FAB387",
-    "editor.fontSize": 15,
-    "code-runner.clearPreviousOutput": true,
-    "hediet.vscode-drawio.theme": "dark",
-    "yaml.validate": false
+    {
+      "icon": "commitizen",
+      "extensions": [
+        ".cz.toml",
+        ".cz.json",
+        ".cz,yml"
+      ]
+    }
+  ],
+  "vsicons.associations.folders": [
+    {
+      "icon": "private",
+      "extensions": [
+        "internal"
+      ]
+    }
+  ]
 }

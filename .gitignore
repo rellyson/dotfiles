@@ -5,3 +5,4 @@ spell
 .luarc.json
 alacritty/colorscheme.yml
 inventory.ini
+.vscode/
