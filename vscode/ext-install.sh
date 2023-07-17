@@ -11,6 +11,7 @@ extlist=(
   redhat.vscode-xml
   asciidoctor.asciidoctor-vscode
   github.github-vscode-theme
+  zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb
   hediet.vscode-drawio
