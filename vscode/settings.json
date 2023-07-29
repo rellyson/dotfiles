@@ -11,21 +11,27 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.fontFamily": "'Fira Code Nerd Font', 'monospace'",
+  "editor.fontFamily": "'FiraCode Nerd Font', 'monospace'",
   "editor.cursorStyle": "block",
   "editor.autoClosingBrackets": "always",
   "editor.fontLigatures": true,
   "editor.codeLens": false,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 15,
   "window.zoomLevel": 0.3,
   "explorer.expandSingleFolderWorkspaces": false,
   "explorer.compactFolders": false,
+  "git.openRepositoryInParentFolders": "never",
   "files.exclude": {
     "**/__pycache__": true
   },
   "files.associations": {
-    "*plays.yml": "ansible"
+    "*plays.yml": "ansible",
+    ".releaserc": "json",
+    ".czrc": "json"
   },
   "terminal.external.linuxExec": "/bin/zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "vsicons.dontShowNewVersionMessage": true,
   "window.titleBarStyle": "custom",
   "vim.cursorStylePerMode.insert": "line",
@@ -43,7 +49,6 @@
   "vim.statusBarColors.visualblock": "#CBA6F7",
   "vim.statusBarColors.visualline": "#CBA6F7",
   "vim.statusBarColors.searchinprogressmode": "#FAB387",
-  "editor.fontSize": 15,
   "code-runner.clearPreviousOutput": true,
   "hediet.vscode-drawio.theme": "dark",
   "yaml.validate": false,
@@ -78,6 +83,12 @@
       "icon": "private",
       "extensions": [
         "internal"
+      ]
+    },
+    {
+      "icon": "blueprint",
+      "extensions": [
+        "diagrams"
       ]
     }
   ]

@@ -11,6 +11,7 @@ extlist=(
   redhat.vscode-xml
   redhat.ansible
   asciidoctor.asciidoctor-vscode
+  jebbs.plantuml
   github.github-vscode-theme
   zguolee.tabler-icons
   formulahendry.code-runner
