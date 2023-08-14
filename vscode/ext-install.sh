@@ -20,6 +20,7 @@ extlist=(
   usernamehw.errorlens
   aaron-bond.better-comments
   tamasfe.even-better-toml
+  mhutchie.git-graph
 )
 
 for ext in "${extlist[@]}"; do

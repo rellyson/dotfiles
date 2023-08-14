@@ -247,7 +247,12 @@ return {
                 color = "#eb3500",
                 name = "AnsibleConfig"
             },
-            ["hosts"] = {icon = "", color = "#bbbbbb", name = "Hosts"}
+            ["hosts"] = {icon = "", color = "#bbbbbb", name = "Hosts"},
+            [".coveragerc"] = {
+                icon = "󱖫",
+                color = "#bababa",
+                name = "Coverage"
+            }
         },
         override_by_extension = {
             ad = {icon = "A", color = "#e84033", name = "Adoc"},

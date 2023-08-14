@@ -1,9 +1,10 @@
 apiVersion: k3d.io/v1alpha5
 kind: Simple
 metadata:
-  name: quintal
+  name: sandbox
 servers: 1  # control-plane
-agents: 3  # workers
+agents: 2  # workers
+image: rancher/k3s:latest
 registries:
   create:
     name: registry.localhost
@@ -14,6 +15,7 @@ options:
     wait: true
   kubeconfig:
     updateDefaultKubeconfig: true
+    switchCurrentContext: true
   runtime:
     ulimits:
       - name: nofile
