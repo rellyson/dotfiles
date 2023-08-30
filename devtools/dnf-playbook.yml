@@ -35,6 +35,8 @@
           - docker-ce
           - docker-ce-cli
           - containerd.io
+          - podman
+          - fuse-overlayfs
 
     - name: Enable docker daemon
       become: true
