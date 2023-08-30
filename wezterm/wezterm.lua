@@ -38,7 +38,7 @@ config.colors = {
         '#94e2d5', '#edecee'
     },
     brights = {
-        '#4d4d4d', '#f38ba8', '#74c7ec', '#F7BAA2', '#b4beee', '#b4beee',
+        '#4d4d4d', '#f38ba8', '#94e2d5', '#F7BAA2', '#b4beee', '#b4beee',
         '#94e2d5', '#edecee'
     }
 }
