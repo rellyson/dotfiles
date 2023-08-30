@@ -40,3 +40,4 @@ ansible-playbook <playbook-file> --ask-become-pass
 - [topgrade](https://github.com/topgrade-rs/topgrade)
 - [NerdFonts](https://www.nerdfonts.com/)
 - [VSCodium](https://vscodium.com/)
+- [wezterm](https://github.com/wez/wezterm)

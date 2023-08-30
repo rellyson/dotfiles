@@ -1,0 +1,15 @@
+---
+- name: Wezterm install
+  hosts: localhost
+  tasks:
+    - name: Install wezterm via package manager
+      become: true
+      ansible.builtin.package:
+        state: present
+        name: wezterm
+
+    - name: Link config file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/wezterm.lua"
+        dest: "{{ ansible_env.HOME }}/.config/wezterm/wezterm.lua"
+        state: link
