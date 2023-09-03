@@ -280,7 +280,8 @@ return {
             log = {icon = "󱞎", color = "#afb42b", name = "Log"},
             out = {icon = "󱀹", color = "#dadada", name = "Out"},
             tmux = {icon = "", color = "#404042", name = "Tmux"},
-            theme = {icon = "", color = "#cc7d6e", name = "Theme"}
+            theme = {icon = "", color = "#cc7d6e", name = "Theme"},
+            ipynb = {icon = "", color = "#F37B2D", name = "JupyterNotebook"}
         }
     }
 }

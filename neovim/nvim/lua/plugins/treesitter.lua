@@ -15,9 +15,11 @@ return {
 
         local languages = {
             'bash', 'c', 'cpp', 'dockerfile', 'elixir', 'gitignore', 'go',
-            'gomod', 'gosum', 'hcl', 'java', 'javascript', 'jsdoc', 'json',
-            'lua', 'markdown', 'markdown_inline', 'python', 'rego', 'ruby',
-            'rust', 'sql', 'terraform', 'toml', 'typescript', 'yaml'
+            'git_config', 'gitignore', 'gitcommit', 'gomod', 'gosum', 'hcl',
+            'java', 'javascript', 'jsdoc', 'json', 'julia', 'lua', 'markdown',
+            'markdown_inline', 'mermaid', 'python', 'requirements', 'rego',
+            'ruby', 'rust', 'sql', 'terraform', 'toml', 'typescript', 'yaml',
+            'xml'
         }
 
         treesitter.setup {

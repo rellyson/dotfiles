@@ -15,7 +15,7 @@ return {
             debug = false,
             sources = {
                 completion.luasnip, completion.spell, diagnostics.ansiblelint,
-                diagnostics.codespell, diagnostics.cpplint, diagnostics.credo,
+                diagnostics.cpplint, diagnostics.credo,
                 diagnostics.dotenv_linter, diagnostics.eslint,
                 diagnostics.golangci_lint, diagnostics.shellcheck,
                 diagnostics.luacheck, diagnostics.opacheck, diagnostics.ruff,
