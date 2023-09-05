@@ -17,14 +17,14 @@ return {
             "ansiblels", "bashls", "clangd", "diagnosticls", "dockerls",
             "docker_compose_language_service", "eslint", "elixirls", "gopls",
             "jsonls", "lua_ls", "marksman", "pyright", "tsserver", "taplo",
-            "tflint", "terraformls", "rust_analyzer", "sqlls", "yamlls"
+            "tflint", "terraformls", "ruff_lsp", "rust_analyzer", "sqlls",
+            "yamlls"
         }
 
         -- which formatters should be installed
         local null_ls = {
             "yamllint", "yamlfmt", "luacheck", "luaformatter", "terraform_fmt",
-            "shfmt", "codespell", "goimports", "golangci_lint", "prettier",
-            "ruff"
+            "shfmt", "codespell", "goimports", "golangci_lint", "prettier"
         }
 
         -- mason setup

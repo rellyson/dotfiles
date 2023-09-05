@@ -10,7 +10,6 @@ extlist=(
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
-  asciidoctor.asciidoctor-vscode
   jebbs.plantuml
   github.github-vscode-theme
   zguolee.tabler-icons
@@ -21,6 +20,7 @@ extlist=(
   aaron-bond.better-comments
   tamasfe.even-better-toml
   mhutchie.git-graph
+  waderyan.gitblame
 )
 
 for ext in "${extlist[@]}"; do

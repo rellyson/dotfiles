@@ -8,7 +8,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 -- general config
 config.default_prog = {
-    '/bin/zsh', '-l', '-c', 'tmux attach || tmux new -s eos-local'
+    '/bin/zsh', '-l', '-c', 'tmux attach || tmux new -s local'
 }
 config.detect_password_input = true
 config.enable_scroll_bar = false
