@@ -281,7 +281,13 @@ return {
             out = {icon = "󱀹", color = "#dadada", name = "Out"},
             tmux = {icon = "", color = "#404042", name = "Tmux"},
             theme = {icon = "", color = "#cc7d6e", name = "Theme"},
-            ipynb = {icon = "", color = "#F37B2D", name = "JupyterNotebook"}
+            ipynb = {icon = "", color = "#F37B2D", name = "JupyterNotebook"},
+            ts = {icon = "󰛦", color = "#377CC8", name = "Typescript"},
+            ["spec.ts"] = {
+                icon = "󰂖",
+                color = "#377CC8",
+                name = "TypescriptTest"
+            }
         }
     }
 }
