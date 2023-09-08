@@ -130,7 +130,7 @@ return {
             [".nvmrc"] = {icon = "󰋙", color = "#CAB841", name = "Nvmrc"},
             ["jsconfig.json"] = {
                 icon = "",
-                color = "#0078D3",
+                color = "#f1e05a",
                 name = "Jsconfig"
             },
             ["tsconfig.json"] = {
@@ -287,6 +287,12 @@ return {
                 icon = "󰂖",
                 color = "#377CC8",
                 name = "TypescriptTest"
+            },
+            js = {icon = "", color = "#f1e05a", name = "Javascript"},
+            ["spec.js"] = {
+                icon = "󰂖",
+                color = "#f1e05a",
+                name = "JavascriptTest"
             }
         }
     }
