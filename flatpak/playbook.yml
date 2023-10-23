@@ -13,9 +13,9 @@
       community.general.flatpak:
         name:
           - com.github.tchx84.Flatseal
-          - com.spotify.Client
           - io.beekeeperstudio.Studio
-          - com.mongodb.Compass
           - rest.insomnia.Insomnia
           - md.obsidian.Obsidian
           - com.jgraph.drawio.desktop
+          - io.podman_desktop.PodmanDesktop
+          - com.spotify.Client

@@ -110,6 +110,10 @@ alias k="kubectl"
 alias lg="lazygit"
 alias cl="clear"
 
+# podman over docker
+alias docker="podman"
+export KIND_EXPERIMENTAL_PROVIDER=podman
+
 # spaceship opts
 SPACESHIP_USER_SHOW=always
 SPACESHIP_HOST_SHOW=always
@@ -132,3 +136,4 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+

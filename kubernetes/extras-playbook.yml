@@ -2,10 +2,13 @@
 - name: Extra k8s setup
   hosts: localhost
   tasks:
-    - name: Install k3d
+    - name: Install kind
+      become: true
       ansible.builtin.shell:
         cmd: |
-          curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+          [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-darwin-amd64
+          chmod +x ./kind
+          mv ./kind /usr/bin/kind
       args:
         executable: /bin/bash
 

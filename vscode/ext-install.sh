@@ -4,13 +4,13 @@
 extlist=(
   vscode-icons-team.vscode-icons
   vscodevim.vim
+  golang.go
   ms-python.python
   ms-kubernetes-tools.vscode-kubernetes-tools
   ms-azuretools.vscode-docker
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
-  jebbs.plantuml
   github.github-vscode-theme
   zguolee.tabler-icons
   formulahendry.code-runner
