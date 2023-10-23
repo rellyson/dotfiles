@@ -110,8 +110,7 @@ alias k="kubectl"
 alias lg="lazygit"
 alias cl="clear"
 
-# podman over docker
-alias docker="podman"
+# kind provider
 export KIND_EXPERIMENTAL_PROVIDER=podman
 
 # spaceship opts
