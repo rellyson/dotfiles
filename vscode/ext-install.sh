@@ -8,6 +8,7 @@ extlist=(
   ms-python.python
   ms-kubernetes-tools.vscode-kubernetes-tools
   ms-azuretools.vscode-docker
+  ms-kubernetes-tools.kind-vscode
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
