@@ -8,9 +8,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Language support
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 call plug#end()
 
 " --------------------------------------------------
@@ -115,7 +112,7 @@ set foldcolumn=1
 syntax enable
 
 " Hide end buffer '~'
-hi! link EndOfBuffer Ignore
+" hi! link EndOfBuffer Ignore
 
 " Set regular expression engine automatically
 set regexpengine=0
@@ -135,6 +132,9 @@ hi Statusline ctermbg=none cterm=bold
 hi SignColumn ctermbg=none cterm=bold
 hi! link SignColumn LineNr
 hi FoldColumn ctermbg=none
+hi GitGutterAdd    ctermfg=Green
+hi GitGutterChange ctermfg=Yellow
+hi GitGutterDelete ctermfg=Red
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -297,7 +297,7 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
-" Pressing ,ss will toggle and untoggle spell checking
+" Pressing <leader>ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
@@ -386,11 +386,13 @@ let g:ale_linters = {
         \ 'toml': ['dprint'],
         \ 'typescript': ['tslint'],
         \ 'xml': ['xmllint'],
-        \ 'yaml': ['yamllint','yamlfmt', 'yaml-language-server'],
+        \ 'yaml': ['yamllint','yamlfmt', 'yaml-language-server']
     \}
+let g:ale_virtualtext_cursor = 'current'
 
-" Git
-hi GitGutterAdd    ctermfg=Green
-hi GitGutterChange ctermfg=Yellow
-hi GitGutterDelete ctermfg=Red
-
+hi ALEErrorSign ctermfg=Red
+hi ALEVirtualTextError ctermfg=Red
+hi ALEWarningSign ctermfg=Yellow
+hi ALEVirtualTextWarning ctermfg=yellow
+hi ALEInfoSign ctermfg=Blue
+hi ALEVirtualTextInfo ctermfg=Blue
