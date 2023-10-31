@@ -1,0 +1,16 @@
+---
+- name: Vim setup
+  hosts: localhost
+  tasks:
+    - name: Install vim
+      become: true
+      ansible.builtin.package:
+        name: vim
+        state: present
+
+    - name: Link config file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/vimrc"
+        dest: "{{ ansible_env.HOME }}/.vimrc"
+        state: "link"
+

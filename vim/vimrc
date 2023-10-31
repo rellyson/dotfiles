@@ -1,0 +1,75 @@
+" Total history lines
+set history=500
+
+" Mouse support
+set mouse=a
+
+" Show line numbers
+set number
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Autoread when file is changed
+set autoread
+au FocusGained,BufEnter * silent! checktime
+
+" Set leader key
+let mapleader = " "
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Wild menu
+set wildmenu
+
+" Always show current position
+set ruler
+
+" Command bar height
+set cmdheight=1
+
+" Search casing
+set ignorecase
+set smartcase
+
+" Disable annoying sounds
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Left extra margin
+set foldcolumn=1
+
+" Syntax highlight
+syntax enable
+
+" Enable regex engine
+set regexpengine=0
+
+" Colors
+set hlsearch
+set background=dark
+
+" Highlight opts
+hi FoldColumn ctermbg=none
+
+" Set encoding
+set encoding=utf-8
+
+" Standard filetype
+"set ffs=unix,doc,mac
+
+" Disable backup
+set nobackup
+set nowb
+set noswapfile
+
+" Space instead of tabs
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+
