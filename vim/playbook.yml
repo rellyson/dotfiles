@@ -1,5 +1,5 @@
 ---
-- name: vim setup
+- name: Vim setup
   hosts: localhost
   tasks:
     - name: Install vim
@@ -8,7 +8,7 @@
         name: vim
         state: present
 
-    - name: Install oh-my-zsh
+    - name: Install Plug.vim
       ansible.builtin.shell:
         cmd: |
             curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

@@ -80,8 +80,8 @@ plugins=(
 	kubectl
 	nvm
 	python
-        pip
-        rust
+    pip
+    rust
 	terraform
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -110,6 +110,8 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias k="kubectl"
+alias ka="kubectl apply"
+alias kd="kubectl describe"
 alias lg="lazygit"
 alias cl="clear"
 
@@ -122,10 +124,6 @@ SPACESHIP_PYTHON_PREFIX="using "
 SPACESHIP_PYTHON_SYMBOL=" "
 SPACESHIP_VENV_PREFIX="in venv "
 SPACESHIP_ANSIBLE_SYMBOL="󱂚 "
-
-# podman over docker
-export KIND_EXPERIMENTAL_PROVIDER=podman
-alias docker=podman
 
 # nvm
 source "$HOME/.nvm/nvm.sh"

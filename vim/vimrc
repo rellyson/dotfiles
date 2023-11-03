@@ -376,17 +376,17 @@ let g:ale_linters = {
         \ 'ansible': ['ansible-lint'],
         \ 'bash': ['shfmt','shellcheck'],
         \ 'docker': ['dprint'],
-        \ 'go': ['gopls','gofmt'],
-        \ 'javascript': ['prettier-eslint'],
+        \ 'go': ['gofmt','golangci-lint'],
+        \ 'javascript': ['prettier'],
         \ 'json': ['prettier'],
         \ 'python': ['autopep8','ruff'],
         \ 'rego': ['opacheck','opafmt'],
         \ 'rust': ['rustfmt'],
-        \ 'terraform': ['tflint','tfsec','terraform-ls'],
+        \ 'terraform': ['tflint','tfsec'],
         \ 'toml': ['dprint'],
         \ 'typescript': ['tslint'],
         \ 'xml': ['xmllint'],
-        \ 'yaml': ['yamllint','yamlfmt', 'yaml-language-server']
+        \ 'yaml': ['yamllint','yamlfmt']
     \}
 let g:ale_virtualtext_cursor = 'current'
 
