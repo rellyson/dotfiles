@@ -112,6 +112,7 @@ export ARCHFLAGS="-arch x86_64"
 alias k="kubectl"
 alias ka="kubectl apply"
 alias kd="kubectl describe"
+alias kg="kubectl get"
 alias lg="lazygit"
 alias cl="clear"
 
@@ -126,8 +127,10 @@ SPACESHIP_VENV_PREFIX="in venv "
 SPACESHIP_ANSIBLE_SYMBOL="󱂚 "
 
 # nvm
+# nvm
 source "$HOME/.nvm/nvm.sh"
 
+# pyenv
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
