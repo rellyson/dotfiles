@@ -4,7 +4,7 @@ metadata:
   name: playground
 servers: 1
 agents: 2
-image: rancher/k3s:v1.28-k3s1
+image: rancher/k3s:v1.28.3-k3s1
 ports:
   - port: 8000:80
     nodeFilters:
