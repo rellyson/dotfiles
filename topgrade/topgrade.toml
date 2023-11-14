@@ -6,7 +6,7 @@ assume_yes = true
 disable = ["git_repos"]
 
 # Ignore failures for these steps
-ignore_failures = ["vagrant","containers"]
+ignore_failures = ["vagrant", "containers"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]

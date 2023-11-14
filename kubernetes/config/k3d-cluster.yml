@@ -25,6 +25,8 @@ options:
           - server:*
     nodeLabels:
       - label: ingress-ready=true
+    nodeLabels:
+      - label: ingress-ready=true
         nodeFilters:
           - server:*
   kubeconfig:
