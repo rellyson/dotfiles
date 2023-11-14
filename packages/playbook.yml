@@ -1,0 +1,23 @@
+---
+- name: System packages
+  hosts: localhost
+  tasks:
+    - name: install system packages
+      become: true
+      ignore_errors: true
+      ansible.builtin.package:
+        state: present
+        name:
+          - openssl
+          - make
+          - cmake
+          - gcc
+          - git-delta
+          - ripgrep
+          - fzf
+          - meld
+          - htop
+          - btop
+          - fzf
+          - ffmpeg
+          - tldr

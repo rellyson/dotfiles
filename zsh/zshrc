@@ -113,9 +113,6 @@ alias kg="kubectl get"
 alias lg="lazygit"
 alias cl="clear"
 
-# kind provider
-# export KIND_EXPERIMENTAL_PROVIDER=podman
-
 # spaceship opts
 SPACESHIP_USER_SHOW=always
 SPACESHIP_HOST_SHOW=always
@@ -125,6 +122,10 @@ SPACESHIP_PYTHON_PREFIX="using "
 SPACESHIP_PYTHON_SYMBOL=" "
 SPACESHIP_VENV_PREFIX="in venv "
 SPACESHIP_ANSIBLE_SYMBOL="󱂚 "
+SPACESHIP_KUBECTL_SHOW=always
+SPACESHIP_KUBECTL_SYMBOL="󰠳 "
+SPACESHIP_KUBECTL_COLOR="#3970e4"
+SPACESHIP_KUBECTL_CONTEXT_SHOW=false
 
 # nvm
 source "$HOME/.nvm/nvm.sh"

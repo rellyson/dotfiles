@@ -4,7 +4,11 @@ metadata:
   name: playground
 servers: 1  # control-plane
 agents: 2  # workers
-image: rancher/k3s:v1.26.9-k3s1
+image: rancher/k3s:v1.28.3-k3s1
+ports:
+  - port: 8081:80
+    nodeFilters:
+      - loadbalancer
 registries:
   create:
     name: registry.localhost
@@ -19,7 +23,8 @@ options:
       - arg: --disable=metrics-server
         nodeFilters:
           - server:*
-      - arg: --disable=traefik
+    nodeLabels:
+      - label: ingress-ready=true
         nodeFilters:
           - server:*
   kubeconfig:
