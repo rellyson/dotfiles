@@ -1,16 +1,3 @@
-" Plugins
-call plug#begin()
-" Fix/linting
-Plug 'dense-analysis/ale'
-
-" Utility
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-call plug#end()
-
-" --------------------------------------------------
 " Vim config
 
 " Sets how many lines of history VIM has to remember
