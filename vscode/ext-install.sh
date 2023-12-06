@@ -17,12 +17,11 @@ extlist=(
   zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb
-  hediet.vscode-drawio
   usernamehw.errorlens
   aaron-bond.better-comments
   tamasfe.even-better-toml
   mhutchie.git-graph
-  waderyan.gitblame
+  mikestead.dotenv
 )
 
 for ext in "${extlist[@]}"; do

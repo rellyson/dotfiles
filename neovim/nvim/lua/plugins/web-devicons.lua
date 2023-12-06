@@ -252,7 +252,8 @@ return {
                 icon = "󱖫",
                 color = "#bababa",
                 name = "Coverage"
-            }
+            },
+            ["kustomization.yaml"] = {icon = "󰬒", color = "#3E5FA8", name = "Kustomize"}
         },
         override_by_extension = {
             ad = {icon = "A", color = "#e84033", name = "Adoc"},
