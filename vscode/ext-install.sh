@@ -2,6 +2,7 @@
 
 # extensions to install
 extlist=(
+  rellyson.roxo-theme-vscode
   vscode-icons-team.vscode-icons
   vscodevim.vim
   golang.go
