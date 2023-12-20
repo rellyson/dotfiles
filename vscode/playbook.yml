@@ -5,11 +5,14 @@
     - name: Install extensions
       ansible.builtin.script:
         cmd: "{{ playbook_dir }}/ext-install.sh"
+
     - name: Link settings file
       ansible.builtin.file:
         src: "{{ playbook_dir }}/settings.json"
         dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/settings.json"
         state: "link"
+
+    - name: Link custom vsicons
       ansible.builtin.file:
         src: "{{ playbook_dir }}/vsicons-custom-icons"
         dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/vsicons-custom-icons"

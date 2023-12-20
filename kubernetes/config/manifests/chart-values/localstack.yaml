@@ -1,0 +1,29 @@
+# https://github.com/localstack/helm-charts/blob/main/charts/localstack/values.yaml
+image:
+  repository: localstack/localstack
+  tag: 3.0
+  pullPolicy: Always
+
+startServices: "iam,s3,sqs,lambda"
+
+mountDind:
+  enabled: true
+  forceTLS: false
+  image: "docker:20.10-dind"
+
+extraEnvVars:
+  - name: DEFAULT_REGION
+    value: "us-east-1"
+
+service:
+  type: NodePort
+  edgeService:
+    name: edge
+    targetPort: 4566
+    nodePort: 31566
+  externalServicePorts:
+    start: 4510
+    end: 4560
+
+nodeSelector:
+  cloud-emulator: localstack

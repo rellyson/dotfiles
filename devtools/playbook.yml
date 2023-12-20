@@ -1,57 +1,82 @@
 ---
-- name: devtools setup
+- name: Devtools setup
   hosts: localhost
   tasks:
-    - name: install system packages
+    - name: Create temporary dir
+      ansible.builtin.file:
+        path: /tmp/dev-tools-install
+        state: directory
+        mode: 0700
+
+    - name: Install system packages
       become: true
-      ignore_errors: true
+      ignore_errors: true  # noqa: ignore-errors
       ansible.builtin.package:
         state: present
         name:
-          - openssl
-          - zlib
-          - bzip2
           - ncurses
           - libffi
           - readline
-          - sqlite
           - tk
-          - make
-          - cmake
-          - gcc
-          - git-delta
-          - ripgrep
-          - fzf
-          - meld
 
-    - name: Install pyenv
-      ansible.builtin.shell:
-        cmd: curl https://pyenv.run | bash
-      args:
-        executable: /bin/bash
+    - name: Get arkade installation script
+      ansible.builtin.get_url:
+        url: https://get.arkade.dev
+        dest: /tmp/dev-tools-install/arkade_install.sh
+        mode: 0755
 
-    - name: Install nvm
-      ansible.builtin.shell:
-        cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-      args:
-        executable: /bin/bash
-
-    - name: Unarchive luarocks
-      ansible.builtin.unarchive:
-        src: https://luarocks.org/releases/luarocks-3.9.2.tar.gz
-        dest: /tmp
-        remote_src: true
-
-    - name: Install luarocks
+    - name: Execute arkade installation script
       become: true
+      changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/luarocks-3.9.2
-        cmd: |
-          ./configure --lua-version=5.4 --with-lua-include=/usr/include
-          make
-          make install
+        chdir: /tmp/dev-tools-install
+        cmd: ./arkade_install.sh
+      args:
+        executable: /bin/sh
+
+    - name: Get nvm installation script
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+        dest: /tmp/dev-tools-install/nvm_install.sh
+        mode: 0755
+
+    - name: Execute nvm installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: /tmp/dev-tools-install
+        cmd: ./nvm_install.sh
+      args:
+        executable: /bin/bash
+
+    - name: Get pyenv installation script
+      ansible.builtin.get_url:
+        url: https://pyenv.run
+        dest: /tmp/dev-tools-install/pyenv_install.sh
+        mode: 0755
+
+    - name: Execute pyenv installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: /tmp/dev-tools-install
+        cmd: ./pyenv_install.sh
+      args:
+        executable: /bin/bash
+
+    - name: Link ssh config
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/config/sshconfig"
+        dest: "{{ ansible_env.HOME }}/.ssh/config"
+        state: "link"
+        force: true
 
     - name: Append gitconfig
       ansible.builtin.blockinfile:
         block: "{{ lookup('ansible.builtin.file', './config/gitconfig') }}"
         path: "{{ ansible_env.HOME }}/.gitconfig"
+
+    - name: Clean temporary dir
+      ansible.builtin.file:
+        path: /tmp/dev-tools-install
+        state: absent

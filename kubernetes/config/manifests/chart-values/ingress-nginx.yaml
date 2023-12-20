@@ -1,0 +1,13 @@
+# https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
+controller:
+  podAnnotations:
+    "prometheus.io/scrape": true
+    "prometheus.io/port": 10254
+  extraArgs:
+    "enable-ssl-passthrough": ""
+  metrics:
+    enabled: true
+    serviceMonitor:
+      additionalLabels:
+        release: prometheus
+      enabled: true

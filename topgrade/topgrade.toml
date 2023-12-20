@@ -3,7 +3,7 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["git_repos"]
+disable = ["git_repos", "vim"]
 
 # Ignore failures for these steps
 ignore_failures = ["vagrant", "containers"]
@@ -42,12 +42,9 @@ cleanup = true
 skip_notify = true
 
 [git]
-#max_concurrency = 5
+max_concurrency = 5
 # Additional git repositories to pull
-#repos = [
-#    "~/src/*/",
-#    "~/.config/something"
-#]
+repos = ["~/Projects/*"]
 
 # Don't pull the predefined git repos
 #pull_predefined = false

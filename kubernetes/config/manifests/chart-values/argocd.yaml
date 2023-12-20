@@ -1,0 +1,33 @@
+# https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+crds:
+  install: true
+  keep: false
+
+global:
+  addPrometheusAnnotations: true
+  logging:
+    format: json
+    level: debug
+
+configs:
+  params:
+    server.insecure: "true"
+
+server:
+  extraArgs:
+    - "--rootpath=/argocd"
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    hosts:
+      - k8s.lb.local
+    paths:
+      - /argocd
+    pathType: Prefix
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true

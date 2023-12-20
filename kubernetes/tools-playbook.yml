@@ -1,23 +1,27 @@
 ---
-- name: Extra k8s setup
+- name: K8s tools setup
   hosts: localhost
   tasks:
-    - name: Install kind
+    - name: Create temporary dir
+      ansible.builtin.file:
+        path: /tmp/k8s-tools-install
+        state: directory
+        mode: 0700
+
+    - name: Get k3d installation script
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh
+        dest: /tmp/k8s-tools-install/k3d_install.sh
+        mode: 0755
+
+    - name: Execute k3d installation script
       become: true
+      changed_when: false
       ansible.builtin.shell:
-        cmd: |
-          [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-darwin-amd64
-          chmod +x ./kind
-          mv ./kind /usr/bin/kind
+        chdir: /tmp/k8s-tools-install
+        cmd: ./k3d_install.sh
       args:
         executable: /bin/bash
-
-    - name: Install gefyra
-      ansible.builtin.shell:
-        cmd: |
-          curl -sSL https://raw.githubusercontent.com/gefyrahq/gefyra/main/install.sh | sh -
-      args:
-        executable: /bin/sh
 
     - name: Install k9s
       become: true
@@ -36,3 +40,8 @@
         dest: "{{ ansible_env.HOME }}/.config/k9s/skin.yml"
         force: true
         mode: 0644
+
+    - name: Clean temporary dir
+      ansible.builtin.file:
+        path: /tmp/k8s-tools-install
+        state: absent

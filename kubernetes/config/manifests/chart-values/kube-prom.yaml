@@ -1,0 +1,25 @@
+# https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+nameOverride: "kube-prom"
+
+crds:
+  enabled: true
+
+grafana:
+  enabled: true
+  defaultDashboardsEnabled: true
+  defaultDashboardsTimezone: America/Sao_Paulo
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      kubernetes.io/tls-acme: "true"
+    hosts:
+      - localhost
+      - k8s.lb.local
+    path: /grafana
+    pathType: Prefix
+  grafana.ini:
+    server:
+      domain: k8s.lb.local
+      root_url: "%(protocol)s://%(domain)s/grafana"
+      serve_from_sub_path: true

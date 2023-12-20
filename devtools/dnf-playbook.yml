@@ -1,9 +1,10 @@
 ---
-- name: dnf development tools
+- name: Dnf development tools
   hosts: localhost
   tasks:
     - name: Add docker repository
       become: true
+      changed_when: false
       ansible.builtin.shell:
         cmd: dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
       args:
@@ -35,3 +36,5 @@
           - containerd.io
           - podman
           - fuse-overlayfs
+          - ansible
+          - ansible-lint

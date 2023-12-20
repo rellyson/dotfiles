@@ -8,12 +8,10 @@ extlist=(
   ms-python.python
   ms-kubernetes-tools.vscode-kubernetes-tools
   ms-azuretools.vscode-docker
-  ms-kubernetes-tools.kind-vscode
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
   grafana.vscode-jsonnet
-  github.github-vscode-theme
   zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb
@@ -22,6 +20,7 @@ extlist=(
   tamasfe.even-better-toml
   mhutchie.git-graph
   mikestead.dotenv
+  waderyan.gitblame
 )
 
 for ext in "${extlist[@]}"; do

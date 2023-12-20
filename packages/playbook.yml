@@ -2,9 +2,8 @@
 - name: System packages
   hosts: localhost
   tasks:
-    - name: install system packages
+    - name: Install system packages
       become: true
-      ignore_errors: true
       ansible.builtin.package:
         state: present
         name:
@@ -17,9 +16,11 @@
           - fzf
           - meld
           - htop
-          - btop
           - fzf
           - ffmpeg
           - tldr
           - bat
           - lsd
+          - zlib
+          - bzip2
+          - tk

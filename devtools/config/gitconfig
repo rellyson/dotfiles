@@ -22,3 +22,6 @@
 
 [pull]
     ff = true
+
+[push]
+    autoSetupRemote = true

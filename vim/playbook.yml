@@ -8,14 +8,6 @@
         name: vim
         state: present
 
-    - name: Install Plug.vim
-      ansible.builtin.shell:
-        cmd: |
-            curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-      args:
-        executable: /bin/sh
-
     - name: Link vimrc file
       ansible.builtin.file:
         src: "{{ playbook_dir }}/vimrc"

@@ -11,6 +11,7 @@
     - name: Install TPM via git
       ansible.builtin.git:
         repo: https://github.com/tmux-plugins/tpm.git
+        version: master
         dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm"
 
     - name: Link config file

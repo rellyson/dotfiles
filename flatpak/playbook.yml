@@ -2,7 +2,7 @@
 - name: Flatpak setup
   hosts: localhost
   tasks:
-    - name: Add the flathub flatpak repository remote
+    - name: Add flathub repository
       community.general.flatpak_remote:
         name: flathub
         state: present
@@ -13,9 +13,11 @@
       community.general.flatpak:
         name:
           - com.github.tchx84.Flatseal
-          - io.beekeeperstudio.Studio
           - rest.insomnia.Insomnia
           - md.obsidian.Obsidian
           - com.jgraph.drawio.desktop
-          - io.podman_desktop.PodmanDesktop
+          - io.beekeeperstudio.Studio
           - com.spotify.Client
+          - com.stremio.Stremio
+          - io.github.mimbrero.WhatsAppDesktop
+          - org.telegram.desktop

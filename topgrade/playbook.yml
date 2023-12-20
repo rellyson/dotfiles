@@ -3,6 +3,7 @@
   hosts: localhost
   tasks:
     - name: Install topgrade
+      changed_when: false
       ansible.builtin.shell:
         cmd: cargo install topgrade
       args:

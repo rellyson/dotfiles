@@ -1,84 +1,91 @@
 {
-  "workbench.tips.enabled": false,
+  "workbench.colorTheme": "Roxo theme",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "workbench.productIconTheme": "Tabler",
+  "workbench.tips.enabled": false,
   "workbench.colorCustomizations": {
-    "statusBar.foreground": "#010409",
-    "statusBar.background": "#89B4FA",
-    "statusBar.noFolderBackground": "#89B4FA",
-    "statusBar.debuggingBackground": "#89B4FA"
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderBackground": "#5f00af",
+    "statusBar.debuggingBackground": "#5f00af",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.background": "#5f00af"
   },
+  "window.zoomLevel": 2,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.fontFamily": "'FiraCode Nerd Font', 'monospace'",
+  "editor.fontFamily": "'Hack Nerd Font', 'monospace'",
   "editor.cursorStyle": "block",
   "editor.autoClosingBrackets": "always",
   "editor.fontLigatures": true,
   "editor.codeLens": false,
   "editor.formatOnSave": true,
   "editor.fontSize": 15,
-  "window.zoomLevel": 0.3,
+  "editor.minimap.enabled": false,
   "explorer.expandSingleFolderWorkspaces": false,
   "explorer.compactFolders": false,
   "git.openRepositoryInParentFolders": "never",
   "files.exclude": {
     "**/__pycache__": true
   },
-  "files.associations": {
-    "*plays.yml": "ansible",
-    ".releaserc": "json",
-    ".czrc": "json"
-  },
   "terminal.external.linuxExec": "/bin/zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "vsicons.dontShowNewVersionMessage": true,
   "window.titleBarStyle": "custom",
+  "yaml.validate": true,
+  "yaml.completion": true,
+  "redhat.telemetry.enabled": false,
+  "code-runner.clearPreviousOutput": true,
+  "hediet.vscode-drawio.theme": "dark",
+  "go.toolsManagement.autoUpdate": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.enableNeovim": true,
   "vim.shell": "/bin/zsh",
-  "vim.leader": "' '",
+  "vim.leader": " ",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": "#89B4FA",
-  "vim.statusBarColors.insert": "#A6E3A1",
-  "vim.statusBarColors.replace": "#F38BA8",
-  "vim.statusBarColors.commandlineinprogress": "#FAB387",
-  "vim.statusBarColors.visualblock": "#CBA6F7",
-  "vim.statusBarColors.visualline": "#CBA6F7",
-  "vim.statusBarColors.searchinprogressmode": "#FAB387",
-  "code-runner.clearPreviousOutput": true,
-  "hediet.vscode-drawio.theme": "dark",
-  "yaml.validate": false,
-  "yaml.completion": true,
-  "redhat.telemetry.enabled": false,
-  "vsicons.associations.files": [
-    {
-      "icon": "python",
-      "extensions": [
-        ".python-version",
-        "pyproject.toml"
-      ]
-    },
-    {
-      "icon": "yamllint",
-      "extensions": [
-        ".yamllint.yml",
-        "yamllint.yml"
-      ]
-    },
-    {
-      "icon": "commitizen",
-      "extensions": [
-        ".cz.toml",
-        ".cz.json",
-        ".cz,yml"
-      ]
-    }
+  "vim.statusBarColors.normal": [
+    "#120d17",
+    "#edecee"
+  ],
+  "vim.statusBarColors.insert": [
+    "#8ED9CD",
+    "#120d17"
+  ],
+  "vim.statusBarColors.replace": [
+    "#F38BA8",
+    "#120d17"
+  ],
+  "vim.statusBarColors.commandlineinprogress": [
+    "#FAB387",
+    "#120d17"
+  ],
+  "vim.statusBarColors.searchinprogressmode": [
+    "#FAB387",
+    "#120d17"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#CBA6F7",
+    "#120d17"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#CBA6F7",
+    "#120d17"
   ],
   "vsicons.associations.folders": [
+    {
+      "icon": "server",
+      "extensions": [
+        "httpserver"
+      ]
+    },
+    {
+      "icon": "git",
+      "extensions": [
+        ".githooks"
+      ]
+    },
     {
       "icon": "private",
       "extensions": [
@@ -86,10 +93,11 @@
       ]
     },
     {
-      "icon": "blueprint",
+      "icon": "minikube",
       "extensions": [
-        "diagrams"
+        "charts"
       ]
     }
-  ]
+  ],
+  "vsicons.associations.files": []
 }
