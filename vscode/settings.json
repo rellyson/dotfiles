@@ -4,11 +4,11 @@
   "workbench.productIconTheme": "Tabler",
   "workbench.tips.enabled": false,
   "workbench.colorCustomizations": {
-    "statusBar.foreground": "#ffffff",
-    "statusBar.noFolderBackground": "#5f00af",
-    "statusBar.debuggingBackground": "#5f00af",
-    "statusBar.debuggingForeground": "#ffffff",
-    "statusBar.background": "#5f00af"
+    "statusBar.foreground": "#edecee",
+    "statusBar.noFolderBackground": "#120d17",
+    "statusBar.debuggingBackground": "#120d17",
+    "statusBar.debuggingForeground": "#edecee",
+    "statusBar.background": "#120d17"
   },
   "window.zoomLevel": 2,
   "editor.bracketPairColorization.enabled": true,
