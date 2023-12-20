@@ -1,10 +1,12 @@
 ---
 - name: Devtools setup
   hosts: localhost
+  vars:
+    tmp_dir_name: /tmp/dev-tools-install
   tasks:
     - name: Create temporary dir
       ansible.builtin.file:
-        path: /tmp/dev-tools-install
+        path: "{{ tmp_dir_name }}"
         state: directory
         mode: 0700
 
@@ -22,14 +24,14 @@
     - name: Get arkade installation script
       ansible.builtin.get_url:
         url: https://get.arkade.dev
-        dest: /tmp/dev-tools-install/arkade_install.sh
+        dest: "{{ tmp_dir_name }}/arkade_install.sh"
         mode: 0755
 
     - name: Execute arkade installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/dev-tools-install
+        chdir: "{{ tmp_dir_name }}"
         cmd: ./arkade_install.sh
       args:
         executable: /bin/sh
@@ -37,14 +39,14 @@
     - name: Get nvm installation script
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
-        dest: /tmp/dev-tools-install/nvm_install.sh
+        dest: "{{ tmp_dir_name }}/nvm_install.sh"
         mode: 0755
 
     - name: Execute nvm installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/dev-tools-install
+        chdir: "{{ tmp_dir_name }}"
         cmd: ./nvm_install.sh
       args:
         executable: /bin/bash
@@ -52,14 +54,14 @@
     - name: Get pyenv installation script
       ansible.builtin.get_url:
         url: https://pyenv.run
-        dest: /tmp/dev-tools-install/pyenv_install.sh
+        dest: "{{ tmp_dir_name }}/pyenv_install.sh"
         mode: 0755
 
     - name: Execute pyenv installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/dev-tools-install
+        chdir: "{{ tmp_dir_name }}"
         cmd: ./pyenv_install.sh
       args:
         executable: /bin/bash
@@ -78,5 +80,5 @@
 
     - name: Clean temporary dir
       ansible.builtin.file:
-        path: /tmp/dev-tools-install
+        path: "{{ tmp_dir_name }}"
         state: absent

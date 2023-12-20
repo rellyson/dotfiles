@@ -1,10 +1,12 @@
 ---
 - name: ZSH setup
   hosts: localhost
+  vars:
+    tmp_dir_name: /tmp/zsh-install
   tasks:
     - name: Create temporary dir
       ansible.builtin.file:
-        path: /tmp/zsh-install
+        path: "{{ tmp_dir_name }}"
         state: directory
         mode: 0700
 
@@ -17,14 +19,14 @@
     - name: Get omz installation script
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-        dest: /tmp/dev-tools-install/omz_install.sh
+        dest: "{{ tmp_dir_name }}/omz_install.sh"
         mode: 0755
 
     - name: Execute omz installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/zsh-install
+        chdir: "{{ tmp_dir_name }}"
         cmd: ./omz_install.sh
       args:
         executable: /bin/sh
@@ -62,5 +64,5 @@
 
     - name: Clean temporary dir
       ansible.builtin.file:
-        path: /tmp/zsh-install
+        path: "{{ tmp_dir_name }}"
         state: absent

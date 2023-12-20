@@ -1,24 +1,26 @@
 ---
 - name: K8s tools setup
   hosts: localhost
+  vars:
+    tmp_dir_name: /tmp/k8s-tools-install
   tasks:
     - name: Create temporary dir
       ansible.builtin.file:
-        path: /tmp/k8s-tools-install
+        path: "{{ tmp_dir_name }}"
         state: directory
         mode: 0700
 
     - name: Get k3d installation script
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh
-        dest: /tmp/k8s-tools-install/k3d_install.sh
+        dest: "{{ tmp_dir_name }}/k3d_install.sh"
         mode: 0755
 
     - name: Execute k3d installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
-        chdir: /tmp/k8s-tools-install
+        chdir: "{{ tmp_dir_name }}"
         cmd: ./k3d_install.sh
       args:
         executable: /bin/bash
@@ -43,5 +45,5 @@
 
     - name: Clean temporary dir
       ansible.builtin.file:
-        path: /tmp/k8s-tools-install
+        path: "{{ tmp_dir_name }}"
         state: absent
