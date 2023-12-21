@@ -134,6 +134,10 @@ SPACESHIP_KUBECTL_SYMBOL="󰠳 "
 SPACESHIP_KUBECTL_COLOR="#3970e4"
 SPACESHIP_KUBECTL_CONTEXT_SHOW=false
 
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # nvm
 source "$HOME/.nvm/nvm.sh"
 
@@ -146,4 +150,5 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$HOME/.arkade/bin/:$PATH"

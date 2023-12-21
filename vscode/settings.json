@@ -99,5 +99,35 @@
       ]
     }
   ],
-  "vsicons.associations.files": []
+  "vsicons.associations.files": [
+    {
+      "icon": "maven",
+      "extensions": [
+        "mvnw"
+      ],
+      "filename": "true"
+    },
+    {
+      "icon": "sdkman",
+      "extensions": [
+        ".sdkmanrc"
+      ],
+      "format": "svg",
+      "filename": "true"
+    },
+    {
+      "icon": "golangci",
+      "filenamesGlob": [
+        "golangci"
+      ],
+      "extensionsGlob": [
+        "yaml",
+        "yml",
+        "toml",
+        "json"
+      ],
+      "format": "svg"
+    }
+  ],
+  "vsicons.customIconFolderPath": "/home/rellyson/.config/VSCodium/User"
 }

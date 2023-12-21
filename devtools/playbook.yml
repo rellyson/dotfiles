@@ -21,20 +21,20 @@
           - readline
           - tk
 
-    - name: Get arkade installation script
+    - name: Get sdkman installation script
       ansible.builtin.get_url:
-        url: https://get.arkade.dev
-        dest: "{{ tmp_dir_name }}/arkade_install.sh"
+        url: https://get.sdkman.io
+        dest: "{{ tmp_dir_name }}/sdkman_install.sh"
         mode: 0755
 
-    - name: Execute arkade installation script
+    - name: Execute sdkman installation script
       become: true
       changed_when: false
       ansible.builtin.shell:
         chdir: "{{ tmp_dir_name }}"
-        cmd: ./arkade_install.sh
+        cmd: ./sdkman_install.sh
       args:
-        executable: /bin/sh
+        executable: /bin/bash
 
     - name: Get nvm installation script
       ansible.builtin.get_url:
@@ -65,6 +65,21 @@
         cmd: ./pyenv_install.sh
       args:
         executable: /bin/bash
+
+    - name: Get arkade installation script
+      ansible.builtin.get_url:
+        url: https://get.arkade.dev
+        dest: "{{ tmp_dir_name }}/arkade_install.sh"
+        mode: 0755
+
+    - name: Execute arkade installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: "{{ tmp_dir_name }}"
+        cmd: ./arkade_install.sh
+      args:
+        executable: /bin/sh
 
     - name: Link ssh config
       ansible.builtin.file:

@@ -12,6 +12,7 @@ extlist=(
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
+  redhat.java
   grafana.vscode-jsonnet
   zguolee.tabler-icons
   formulahendry.code-runner
