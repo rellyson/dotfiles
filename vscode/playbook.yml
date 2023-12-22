@@ -12,6 +12,12 @@
         dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/settings.json"
         state: "link"
 
+    - name: Enable vsc marketplace
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/product.json"
+        dest: "{{ ansible_env.HOME }}/.config/VSCodium/product.json"
+        state: "link"
+
     - name: Link custom vsicons
       ansible.builtin.file:
         src: "{{ playbook_dir }}/vsicons-custom-icons"

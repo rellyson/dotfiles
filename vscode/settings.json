@@ -108,6 +108,17 @@
       "filename": "true"
     },
     {
+      "icon": "commitizen",
+      "filenamesGlob": [
+        "cz"
+      ],
+      "extensionsGlob": [
+        "toml",
+        "yaml"
+      ],
+      "format": "svg"
+    },
+    {
       "icon": "sdkman",
       "extensions": [
         ".sdkmanrc"
@@ -125,6 +136,24 @@
         "yml",
         "toml",
         "json"
+      ],
+      "format": "svg"
+    },
+    {
+      "icon": "ruff",
+      "filenamesGlob": [
+        "ruff"
+      ],
+      "extensionsGlob": [
+        "toml"
+      ],
+      "format": "svg"
+    },
+    {
+      "icon": "gotmpl",
+      "extensions": [
+        "tmpl",
+        "tpl"
       ],
       "format": "svg"
     }

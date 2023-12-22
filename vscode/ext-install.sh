@@ -13,12 +13,14 @@ extlist=(
   redhat.vscode-xml
   redhat.ansible
   redhat.java
+  vscjava.vscode-java-dependency
   grafana.vscode-jsonnet
   zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb
   usernamehw.errorlens
   aaron-bond.better-comments
+  christian-kohler.path-intellisense
   tamasfe.even-better-toml
   mhutchie.git-graph
   mikestead.dotenv
