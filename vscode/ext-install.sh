@@ -7,14 +7,12 @@ extlist=(
   vscodevim.vim
   golang.go
   ms-python.python
+  rust-lang.rust-analyzer
   ms-kubernetes-tools.vscode-kubernetes-tools
   ms-azuretools.vscode-docker
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
-  redhat.java
-  vscjava.vscode-java-dependency
-  grafana.vscode-jsonnet
   zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb

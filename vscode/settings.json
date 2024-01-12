@@ -156,7 +156,17 @@
         "tpl"
       ],
       "format": "svg"
-    }
+    },
+    {
+      "icon": "goreleaser",
+      "filenamesGlob": [
+        "goreleaser"
+      ],
+      "extensionsGlob": [
+        "yaml"
+      ],
+      "format": "svg"
+    },
   ],
   "vsicons.customIconFolderPath": "/home/rellyson/.config/VSCodium/User"
 }

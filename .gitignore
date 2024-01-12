@@ -6,3 +6,4 @@ spell
 alacritty/colorscheme.yml
 inventory.ini
 .vscode/
+.venv/
