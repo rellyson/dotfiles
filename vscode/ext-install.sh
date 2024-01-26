@@ -23,6 +23,7 @@ extlist=(
   mhutchie.git-graph
   mikestead.dotenv
   waderyan.gitblame
+  piotrpalarz.vscode-gitignore-generator
 )
 
 for ext in "${extlist[@]}"; do

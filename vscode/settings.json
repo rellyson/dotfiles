@@ -77,7 +77,8 @@
     {
       "icon": "server",
       "extensions": [
-        "httpserver"
+        "httpserver",
+        "http"
       ]
     },
     {
@@ -96,6 +97,12 @@
       "icon": "minikube",
       "extensions": [
         "charts"
+      ]
+    },
+    {
+      "icon": "shared",
+      "extensions": [
+        "core"
       ]
     }
   ],
@@ -159,14 +166,20 @@
     },
     {
       "icon": "goreleaser",
-      "filenamesGlob": [
-        "goreleaser"
+      "extensions": [
+        ".goreleaser.yaml"
       ],
-      "extensionsGlob": [
-        "yaml"
-      ],
-      "format": "svg"
+      "format": "svg",
+      "filename": "true"
     },
+    {
+      "icon": "pytest",
+      "extensions": [
+        "pytest.ini"
+      ],
+      "format": "svg",
+      "filename": true
+    }
   ],
   "vsicons.customIconFolderPath": "/home/rellyson/.config/VSCodium/User"
 }
