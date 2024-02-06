@@ -1,6 +1,6 @@
 -- luacheck: globals vim
 return {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     event = {"BufReadPre", "BufNewFile", "BufWritePre"},
     config = function()
         local setup, null_ls = pcall(require, "null-ls")
