@@ -12,6 +12,12 @@
         dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/settings.json"
         state: "link"
 
+    - name: Link keybindings file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/keybindings.json"
+        dest: "{{ ansible_env.HOME }}/.config/VSCodium/User/keybindings.json"
+        state: "link"
+
     - name: Enable vsc marketplace
       ansible.builtin.file:
         src: "{{ playbook_dir }}/product.json"

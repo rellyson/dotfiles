@@ -13,6 +13,8 @@ extlist=(
   redhat.vscode-yaml
   redhat.vscode-xml
   redhat.ansible
+  hashicorp.hcl
+  EditorConfig.EditorConfig
   zguolee.tabler-icons
   formulahendry.code-runner
   vadimcn.vscode-lldb
@@ -23,7 +25,6 @@ extlist=(
   mhutchie.git-graph
   mikestead.dotenv
   waderyan.gitblame
-  piotrpalarz.vscode-gitignore-generator
 )
 
 for ext in "${extlist[@]}"; do
