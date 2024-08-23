@@ -1,0 +1,9 @@
+---
+- name: Zed setup
+  hosts: localhost
+  tasks:
+    - name: Link settings file
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/settings.json"
+        dest: "{{ ansible_env.HOME }}/.config/zed/settings.json"
+        state: "link"

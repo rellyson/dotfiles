@@ -1,0 +1,62 @@
+{
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "buffer_font_family": "FiraCode Nerd Font",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Rosé Pine"
+  },
+  "enable_language_server": true,
+  "show_inline_completions": true,
+  "vim_mode": true,
+  "terminal": {
+    "shell": "system",
+    "program": "zsh"
+  },
+  "languages": {
+    "Go": {
+      "language_servers": ["gopls"]
+    },
+    "JSON": {
+      "language_servers": ["json-language-server"]
+    },
+    "Lua": {
+      "language_servers": ["lua-language-server"]
+    },
+    "Python": {
+      "language_servers": ["pyright"]
+    },
+    "Terraform": {
+      "language_servers": ["terraform-ls"]
+    },
+    "TOML": {
+      "language_servers": ["taplo"]
+    },
+    "YAML": {
+      "language_servers": ["yaml-language-server"]
+    }
+  },
+  "lsp": {
+    "yaml-language-server": {
+      "initialization_options": {
+        "yaml": {
+          "format": {
+            "enable": true
+          },
+          "validate": true,
+          "completion": true,
+          "keyOrdering": false
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        }
+      }
+    }
+  }
+}

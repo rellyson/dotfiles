@@ -44,3 +44,4 @@ ansible-playbook <playbook-file> --ask-become-pass
 - [VSCodium](https://vscodium.com/)
 - [wezterm](https://github.com/wez/wezterm)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- [zed](https://zed.dev/docs)
