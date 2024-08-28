@@ -5,14 +5,26 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine"
+    "dark": "Roxo Theme"
+  },
+  "project_panel": {
+    "auto_fold_dirs": false
   },
   "enable_language_server": true,
   "show_inline_completions": true,
   "vim_mode": true,
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 1000
+    }
+  },
   "terminal": {
     "shell": "system",
-    "program": "zsh"
+    "program": "zsh",
+    "copy_on_select": true,
+    "font_family": "FiraCode Nerd Font Mono"
   },
   "languages": {
     "Go": {

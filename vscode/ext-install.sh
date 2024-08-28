@@ -25,8 +25,9 @@ extlist=(
   mhutchie.git-graph
   mikestead.dotenv
   waderyan.gitblame
+  exiasr.hadolint
 )
 
 for ext in "${extlist[@]}"; do
-  codium --install-extension "$ext"
+  code --install-extension "$ext"
 done

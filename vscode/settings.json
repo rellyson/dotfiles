@@ -3,21 +3,23 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "Tabler",
   "workbench.tips.enabled": false,
+  "workbench.activityBar.location": "top",
   "workbench.colorCustomizations": {
-    "statusBar.foreground": "#edecee",
+    "statusBar.background": "#120d17",
     "statusBar.noFolderBackground": "#120d17",
     "statusBar.debuggingBackground": "#120d17",
-    "statusBar.debuggingForeground": "#edecee",
-    "statusBar.background": "#120d17"
+    "statusBar.foreground": "#edecee",
+    "statusBar.debuggingForeground": "#edecee"
   },
-  "workbench.activityBar.location": "top",
-  "window.zoomLevel": 2,
   "window.customTitleBarVisibility": "auto",
+  "window.menuBarVisibility": "classic",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0.8,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.fontFamily": "'Hack Nerd Font Mono', 'monospace'",
-  "editor.autoClosingBrackets": "always",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace'",
   "editor.fontLigatures": true,
+  "editor.autoClosingBrackets": "always",
   "editor.codeLens": false,
   "editor.formatOnSave": true,
   "editor.fontSize": 15,
@@ -34,12 +36,6 @@
   },
   "terminal.external.linuxExec": "/bin/zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "window.titleBarStyle": "custom",
-  "yaml.validate": true,
-  "yaml.completion": true,
-  "redhat.telemetry.enabled": false,
-  "code-runner.clearPreviousOutput": true,
-  "go.toolsManagement.autoUpdate": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.enableNeovim": true,
@@ -51,7 +47,7 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<S-h>",
+        "<S-h>"
       ],
       "commands": [
         ":bprevious"
@@ -59,7 +55,7 @@
     },
     {
       "before": [
-        "<S-l>",
+        "<S-l>"
       ],
       "commands": [
         ":bnext"
@@ -190,7 +186,7 @@
       "commands": [
         "workbench.action.quickOpen"
       ]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -287,7 +283,8 @@
     {
       "icon": "minikube",
       "extensions": [
-        "charts"
+        "charts",
+        "chart"
       ]
     },
     {
@@ -383,7 +380,7 @@
         ".tf",
         ".tfvars"
       ],
-      "format": "svg",
+      "format": "svg"
     },
     {
       "icon": "taskfile",
@@ -396,9 +393,27 @@
       "format": "svg",
       "filename": "true"
     },
+    {
+      "icon": "ghactions",
+      "extensions": [
+        "workflow.yml",
+        "workflow.yaml",
+        "actions.yml",
+        "actions.yaml",
+        "gh-actions.yml",
+        "gh-actions.yaml"
+      ],
+      "format": "svg",
+      "filename": true
+    }
   ],
-  "vsicons.customIconFolderPath": "/home/rellyson/.config/VSCodium/User",
+  "vsicons.customIconFolderPath": "/home/rellyson/.config/Code/User",
   "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": false,
+  "yaml.validate": true,
+  "yaml.completion": true,
+  "code-runner.clearPreviousOutput": true,
+  "go.toolsManagement.autoUpdate": true,
   "dotnet.server.useOmnisharp": true,
-  "omnisharp.enableEditorConfigSupport": true,
+  "omnisharp.enableEditorConfigSupport": true
 }
