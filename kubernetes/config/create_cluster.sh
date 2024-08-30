@@ -12,7 +12,7 @@ fi
 # Cluster creation
 echo "Creating cluster $cluster_name with ingress-nginx and kube-prom..."
 
-k3d cluster create $cluster_name --config k3d-config.yaml
+k3d cluster create $cluster_name --config k3d-cluster.yaml
 
 # Install kube-prom deployment via helm
 echo "Installing kube-prom..."
@@ -21,12 +21,9 @@ helm upgrade --install kube-prom prometheus-community/kube-prometheus-stack \
 --namespace monitoring --create-namespace \
 --values manifests/chart-values/kube-prom.yaml --wait --timeout 120s
 
-# Install ingress-nginx deployment via helm
+# Install ingress-nginx
 echo "Installing ingress-nginx..."
 
-helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx \
---namespace ingress-nginx --create-namespace \
---values manifests/chart-values/ingress-nginx.yaml --wait --timeout 60s
-
+kubectl apply -f manifests/ingress-nginx-deploy.yaml
 
 echo "Cluster $cluster_name created. Enjoy! 🚀"
