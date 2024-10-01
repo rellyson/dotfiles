@@ -1,3 +1,4 @@
+" vi: ft=batch
 " Vim config
 
 " Sets how many lines of history VIM has to remember

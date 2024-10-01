@@ -411,6 +411,15 @@
       ],
       "format": "svg",
       "filename": true
+    },
+    {
+      "icon": "air",
+      "extensions": [
+        ".air.toml",
+        "air.toml"
+      ],
+      "format": "svg",
+      "filename": "true"
     }
   ],
   "vsicons.customIconFolderPath": "/home/rellyson/.config/Code/User",

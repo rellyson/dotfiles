@@ -1,10 +1,10 @@
 {
   "ui_font_size": 18,
   "buffer_font_size": 16,
-  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Roxo Theme",
     "dark": "Roxo Theme"
   },
   "project_panel": {
@@ -13,6 +13,16 @@
   "enable_language_server": true,
   "show_inline_completions": true,
   "vim_mode": true,
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "features": {
+    "copilot": false,
+    "inline_completion_provider": "none"
+  },
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
@@ -23,6 +33,7 @@
   "terminal": {
     "shell": "system",
     "program": "zsh",
+    "working_directory": "current_project_directory",
     "copy_on_select": true,
     "font_family": "FiraCode Nerd Font Mono"
   },
@@ -51,8 +62,11 @@
   },
   "lsp": {
     "yaml-language-server": {
-      "initialization_options": {
+      "settings": {
         "yaml": {
+          "schemaStore": {
+            "enable": true
+          },
           "format": {
             "enable": true
           },
@@ -69,6 +83,41 @@
           "typeCheckingMode": "strict"
         }
       }
+    },
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": false,
+          "compositeLiteralTypes": false,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  },
+  "assistant": {
+    "enabled": false,
+    "version": "2",
+    "button": false,
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    }
+  },
+  "language_models": {
+    "openai": {
+      "low_speed_timeout_in_seconds": 120,
+      "version": "1",
+      "available_models": [
+        {
+          "provider": "openai",
+          "name": "gpt-4o-mini",
+          "max_tokens": 128000
+        }
+      ]
     }
   }
 }

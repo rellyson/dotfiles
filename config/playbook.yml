@@ -1,0 +1,45 @@
+---
+- name: Config setup
+  hosts: localhost
+  tasks:
+    - name: Append gitconfig
+      ansible.builtin.blockinfile:
+        block: "{{ lookup('ansible.builtin.file', './gitconfig') }}"
+        path: "{{ ansible_env.HOME }}/.gitconfig"
+
+    - name: Copy ssh config
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/sshconfig"
+        dest: "{{ ansible_env.HOME }}/.ssh/config"
+        mode: '0644'
+
+    - name: Ensure yamllint directory
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.config/yamllint"
+        state: "directory"
+        mode: "0700"
+
+    - name: Link yamllint config
+      ansible.builtin.file:
+        src: "{{ playbook_dir }}/yamllint"
+        dest: "{{ ansible_env.HOME }}/.config/yamllint/config"
+        state: "link"
+        force: true
+
+    - name: Ensure aws directory
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.aws"
+        state: "directory"
+        mode: "0700"
+
+    - name: Copy aws config
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/aws/config"
+        dest: "{{ ansible_env.HOME }}/.aws/config"
+        mode: '0644'
+
+    - name: Copy aws credentials
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/aws/credentials"
+        dest: "{{ ansible_env.HOME }}/.aws/credentials"
+        mode: '0644'

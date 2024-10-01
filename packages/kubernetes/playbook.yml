@@ -1,5 +1,5 @@
 ---
-- name: K8s tools setup
+- name: Kubernetes packages
   hosts: localhost
   vars:
     tmp_dir_name: /tmp/k8s-tools-install
@@ -9,6 +9,21 @@
         path: "{{ tmp_dir_name }}"
         state: directory
         mode: 0700
+
+    - name: Get arkade installation script
+      ansible.builtin.get_url:
+        url: https://get.arkade.dev
+        dest: "{{ tmp_dir_name }}/arkade_install.sh"
+        mode: 0755
+
+    - name: Execute arkade installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: "{{ tmp_dir_name }}"
+        cmd: ./arkade_install.sh
+      args:
+        executable: /bin/sh
 
     - name: Get k3d installation script
       ansible.builtin.get_url:
@@ -28,7 +43,7 @@
     - name: Install k9s
       become: true
       ansible.builtin.unarchive:
-        src: https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
+        src: https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Linux_amd64.tar.gz
         dest: /usr/bin
         list_files: true
         remote_src: true
@@ -38,10 +53,9 @@
 
     - name: Get transparent skin for k9s
       ansible.builtin.get_url:
-        url: https://raw.githubusercontent.com/derailed/k9s/master/skins/transparent.yml
-        dest: "{{ ansible_env.HOME }}/.config/k9s/skin.yml"
-        force: true
-        mode: 0644
+        url: https://raw.githubusercontent.com/derailed/k9s/master/skins/transparent.yaml
+        dest: "{{ ansible_env.HOME }}/.config/k9s/skin.yaml"
+        mode: '0644'
 
     - name: Clean temporary dir
       ansible.builtin.file:

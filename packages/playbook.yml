@@ -1,7 +1,15 @@
 ---
-- name: System packages
+- name: General packages
   hosts: localhost
+  vars:
+    tmp_dir_name: /tmp/packages-install
   tasks:
+    - name: Create temporary dir
+      ansible.builtin.file:
+        path: "{{ tmp_dir_name }}"
+        state: directory
+        mode: '0700'
+
     - name: Install system packages
       become: true
       ansible.builtin.package:
@@ -24,3 +32,53 @@
           - zlib
           - bzip2
           - tk
+
+    - name: Get sdkman installation script
+      ansible.builtin.get_url:
+        url: https://get.sdkman.io
+        dest: "{{ tmp_dir_name }}/sdkman_install.sh"
+        mode: '0755'
+
+    - name: Execute sdkman installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: "{{ tmp_dir_name }}"
+        cmd: ./sdkman_install.sh
+      args:
+        executable: /bin/bash
+
+    - name: Get nvm installation script
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+        dest: "{{ tmp_dir_name }}/nvm_install.sh"
+        mode: 0755
+
+    - name: Execute nvm installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: "{{ tmp_dir_name }}"
+        cmd: ./nvm_install.sh
+      args:
+        executable: /bin/bash
+
+    - name: Get pyenv installation script
+      ansible.builtin.get_url:
+        url: https://pyenv.run
+        dest: "{{ tmp_dir_name }}/pyenv_install.sh"
+        mode: '0755'
+
+    - name: Execute pyenv installation script
+      become: true
+      changed_when: false
+      ansible.builtin.shell:
+        chdir: "{{ tmp_dir_name }}"
+        cmd: ./pyenv_install.sh
+      args:
+        executable: /bin/bash
+
+    - name: Clean temporary dir
+      ansible.builtin.file:
+        path: "{{ tmp_dir_name }}"
+        state: absent

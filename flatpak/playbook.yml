@@ -9,21 +9,14 @@
         flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
         method: user
 
-    - name: Install apps
+    - name: Install applications
       community.general.flatpak:
         name:
           - com.github.tchx84.Flatseal
-          - com.vscodium.codium
-          - com.jetbrains.IntelliJ-IDEA-Community
-          - rest.insomnia.Insomnia
           - io.beekeeperstudio.Studio
           - md.obsidian.Obsidian
           - com.jgraph.drawio.desktop
-
-    - name: Install personal apps
-      community.general.flatpak:
-        name:
+          - org.localsend.localsend_app
           - com.spotify.Client
-          - com.stremio.Stremio
           - io.github.mimbrero.WhatsAppDesktop
           - org.telegram.desktop

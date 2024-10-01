@@ -19,7 +19,7 @@ config.term = 'xterm-256color'
 -- appearance config
 config.enable_tab_bar = false
 config.window_padding = {left = 3, right = 1, top = 0, bottom = 0}
-config.font_size = 14
+config.font_size = 12
 config.line_height = 1.1
 
 -- colorscheme

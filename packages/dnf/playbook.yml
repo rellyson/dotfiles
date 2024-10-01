@@ -1,5 +1,5 @@
 ---
-- name: Dnf development tools
+- name: Dnf packages
   hosts: localhost
   tasks:
     - name: Add docker repository
@@ -38,3 +38,7 @@
           - fuse-overlayfs
           - ansible
           - ansible-lint
+          - ncurses
+          - libffi
+          - readline
+          - tk

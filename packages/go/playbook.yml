@@ -1,0 +1,9 @@
+---
+- name: Go packages
+  hosts: localhost
+  tasks:
+    - name: Execute tool installation script
+      become: true
+      ansible.builtin.script: ./install_tools.sh
+      args:
+        executable: /bin/bash

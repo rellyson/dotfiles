@@ -71,6 +71,8 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    aws
+    azure
 	git
 	node
 	docker
@@ -119,6 +121,8 @@ alias lg="lazygit"
 
 # useful aliases
 alias cl="clear"
+alias task="go-task"
+alias update="sudo dnf --refresh update -y && topgrade -y"
 
 # spaceship opts
 SPACESHIP_USER_SHOW=always
@@ -135,18 +139,19 @@ SPACESHIP_KUBECTL_COLOR="#3970e4"
 SPACESHIP_KUBECTL_CONTEXT_SHOW=false
 SPACESHIP_GOLANG_SYMBOL=" "
 SPACESHIP_GOLANG_COLOR="#59bbe2"
+SPACESHIP_AWS_PREFIX="using profile "
+SPACESHIP_AWS_SYMBOL="󰸏 "
+SPACESHIP_AWS_COLOR="#f09228"
+SPACESHIP_AZURE_PREFIX="with subscription "
+SPACESHIP_AZURE_SYMBOL=" "
+SPACESHIP_AZURE_COLOR="#33B4F0"
 
 # sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # nvm
-source "$HOME/.nvm/nvm.sh"
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+source "$HOME/.config/nvm/nvm.sh"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"

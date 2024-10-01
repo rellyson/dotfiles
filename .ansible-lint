@@ -1,0 +1,5 @@
+# vi: ft=yaml
+
+exclude_paths:
+  - kubernetes/manifests/
+  - kubernetes/config/

@@ -12,7 +12,7 @@ fi
 # Cluster creation
 echo "Creating cluster $cluster_name with ingress-nginx and kube-prom..."
 
-k3d cluster create $cluster_name --config k3d-cluster.yaml
+k3d cluster create $cluster_name --config config/k3d-cluster.yaml
 
 # Install kube-prom deployment via helm
 echo "Installing kube-prom..."

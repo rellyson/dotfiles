@@ -1,0 +1,9 @@
+---
+- name: LLMs
+  hosts: localhost
+  tasks:
+    - name: Execute llms installation script
+      become: true
+      ansible.builtin.script: ./installation.sh
+      args:
+        executable: /bin/bash

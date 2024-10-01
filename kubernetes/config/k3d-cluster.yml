@@ -1,20 +1,19 @@
 apiVersion: k3d.io/v1alpha5
 kind: Simple
-servers: 1  # control-plane
-agents: 3  # workers
-image: rancher/k3s:v1.28.2-k3s1
-subnet: "172.22.0.0/16"
+servers: 1 #  control-plane
+agents: 2 #  workers
+subnet: "172.20.0.0/16"
 ports:
   - port: 8081:80
     nodeFilters:
       - server:0
-registries:
-  create:
-    name: registry.localhost
-    host: "0.0.0.0"
-    hostPort: "5000"
+    registries:
+      create:
+        name: registry.localhost
+        host: "0.0.0.0"
+        hostPort: "5000"
 hostAliases:
-  - ip: 172.22.0.3
+  - ip: 172.20.0.1
     hostnames:
       - k8s.lb.local
 options:
@@ -27,6 +26,12 @@ options:
         nodeFilters:
           - server:*
       - arg: --disable=traefik
+        nodeFilters:
+          - server:*
+      - arg: --flannel-backend=none
+        nodeFilters:
+          - server:*
+      - arg: --disable-network-policy
         nodeFilters:
           - server:*
     nodeLabels:
