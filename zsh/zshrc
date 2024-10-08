@@ -150,12 +150,14 @@ SPACESHIP_AZURE_COLOR="#33B4F0"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# nvm
-source "$HOME/.config/nvm/nvm.sh"
+# asdf
+source "$HOME/.asdf/asdf.sh"
+
+# arkade
+export PATH="$HOME/.arkade/bin/:$PATH"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
-export PATH="$HOME/.arkade/bin/:$PATH"

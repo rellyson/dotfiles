@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Golang debuuger
+go install github.com/go-delve/delve/cmd/dlv@latest
+
 # Air hot reloading
 go install github.com/air-verse/air@latest
 
