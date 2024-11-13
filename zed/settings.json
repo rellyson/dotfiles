@@ -19,6 +19,15 @@
   "chat_panel": {
     "button": false
   },
+  "assistant": {
+    "enabled": true,
+    "version": "2",
+    "button": true,
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    }
+  },
   "features": {
     "copilot": false,
     "inline_completion_provider": "none"
@@ -96,15 +105,6 @@
           "rangeVariableTypes": true
         }
       }
-    }
-  },
-  "assistant": {
-    "enabled": false,
-    "version": "2",
-    "button": false,
-    "default_model": {
-      "provider": "openai",
-      "model": "gpt-4o-mini"
     }
   },
   "language_models": {

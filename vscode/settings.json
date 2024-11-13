@@ -281,13 +281,6 @@
       ]
     },
     {
-      "icon": "minikube",
-      "extensions": [
-        "charts",
-        "chart"
-      ]
-    },
-    {
       "icon": "shared",
       "extensions": [
         "core"
@@ -302,9 +295,41 @@
     {
       "icon": "script",
       "extensions": [
-        "troubleshooting"
+        "troubleshooting",
+        "init"
       ]
-    }
+    },
+    {
+      "icon": "bloc",
+      "extensions": [
+        "proto"
+      ]
+    },
+    {
+      "icon": "tf",
+      "extensions": [
+        ".terraform",
+        "terraform"
+      ],
+      "format": "svg",
+      "filename": "true"
+    },
+    {
+      "icon": "protobuf",
+      "extensions": [
+        "proto",
+        "protobuf"
+      ],
+    },
+    {
+      "icon": "helm",
+      "extensions": [
+        "charts",
+        "chart"
+      ],
+      "format": "svg",
+      "filename": "true"
+    },
   ],
   "vsicons.associations.files": [
     {
@@ -381,14 +406,6 @@
       "filename": true
     },
     {
-      "icon": "tofu",
-      "extensions": [
-        ".tf",
-        ".tfvars"
-      ],
-      "format": "svg"
-    },
-    {
       "icon": "taskfile",
       "extensions": [
         "Taskfile.yml",
@@ -420,7 +437,23 @@
       ],
       "format": "svg",
       "filename": "true"
-    }
+    },
+    {
+      "icon": "inc",
+      "extensions": [
+        ".backup",
+        ".bkp"
+      ]
+    },
+    {
+      "icon": "kustomize",
+      "extensions": [
+        "kustomization.yml",
+        "kustomization.yaml",
+      ],
+      "format": "svg",
+      "filename": true
+    },
   ],
   "vsicons.customIconFolderPath": "/home/rellyson/.config/Code/User",
   "vsicons.dontShowNewVersionMessage": true,
@@ -429,6 +462,7 @@
   "yaml.completion": true,
   "code-runner.clearPreviousOutput": true,
   "go.toolsManagement.autoUpdate": true,
-  "dotnet.server.useOmnisharp": true,
-  "omnisharp.enableEditorConfigSupport": true
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "lldb.suppressUpdateNotifications": true
 }
