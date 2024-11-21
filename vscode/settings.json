@@ -11,10 +11,12 @@
     "statusBar.foreground": "#edecee",
     "statusBar.debuggingForeground": "#edecee"
   },
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
   "window.customTitleBarVisibility": "auto",
   "window.menuBarVisibility": "classic",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0.8,
+  "window.zoomLevel": 1,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.fontFamily": "'FiraCode Nerd Font Mono', 'monospace'",
@@ -22,9 +24,10 @@
   "editor.autoClosingBrackets": "always",
   "editor.codeLens": false,
   "editor.formatOnSave": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
+  "editor.inlineSuggest.suppressSuggestions": true,
   "explorer.expandSingleFolderWorkspaces": false,
   "explorer.compactFolders": false,
   "git.openRepositoryInParentFolders": "never",
@@ -36,6 +39,7 @@
   },
   "terminal.external.linuxExec": "/bin/zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "telemetry.telemetryLevel": "off",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.enableNeovim": true,
@@ -330,6 +334,32 @@
       "format": "svg",
       "filename": "true"
     },
+    {
+      "icon": "asset",
+      "extensions": [
+        "providers"
+      ]
+    },
+    {
+      "icon": "health",
+      "extensions": [
+        "health",
+        "healthcheck",
+        "heartbeat"
+      ],
+      "format": "svg",
+      "filename": "true"
+    },
+    {
+      "icon": "migration",
+      "extensions": [
+        "migrate",
+        "migration",
+        "migrations",
+      ],
+      "format": "svg",
+      "filename": "true"
+    }
   ],
   "vsicons.associations.files": [
     {
@@ -454,6 +484,36 @@
       "format": "svg",
       "filename": true
     },
+    {
+      "icon": "envoy",
+      "extensions": [
+        "envoy.yaml",
+        "envoy.yml",
+        "envoy-override.yaml",
+        "envoy-override.yml"
+      ],
+      "format": "svg",
+      "filename": true
+    },
+    {
+      "icon": "go_fuchsia",
+      "extensions": [
+        ".go-version",
+        "go-version"
+      ],
+      "format": "svg",
+      "filename": true
+    },
+    {
+      "icon": "readme",
+      "extensions": [
+        "README",
+        "README.md",
+        "README.txt"
+      ],
+      "format": "png",
+      "filename": true
+    }
   ],
   "vsicons.customIconFolderPath": "/home/rellyson/.config/Code/User",
   "vsicons.dontShowNewVersionMessage": true,
@@ -464,5 +524,6 @@
   "go.toolsManagement.autoUpdate": true,
   "go.lintTool": "golangci-lint",
   "go.lintOnSave": "package",
-  "lldb.suppressUpdateNotifications": true
+  "lldb.suppressUpdateNotifications": true,
+  "cody.telemetry.level": "off",
 }
