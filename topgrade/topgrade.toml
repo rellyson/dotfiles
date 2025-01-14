@@ -3,10 +3,10 @@
 assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["git_repos", "vim", "firmware"]
+disable = ["git_repos", "vim", "firmware", "dotnet"]
 
 # Ignore failures for these steps
-ignore_failures = ["vagrant", "containers"]
+ignore_failures = ["vagrant", "containers", "asdf"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]

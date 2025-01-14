@@ -8,7 +8,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 -- general config
 config.default_prog = {
-    '/bin/zsh', '-l', '-c', 'tmux attach || tmux new -s local'
+    '/bin/zsh', '-l', '-c', 'tmux attach || tmux new -s session-01'
 }
 config.detect_password_input = true
 config.enable_scroll_bar = false
@@ -21,6 +21,8 @@ config.enable_tab_bar = false
 config.window_padding = {left = 3, right = 1, top = 0, bottom = 0}
 config.font_size = 12
 config.line_height = 1.1
+config.initial_cols = 180
+config.initial_rows = 34
 
 -- colorscheme
 config.colors = {
