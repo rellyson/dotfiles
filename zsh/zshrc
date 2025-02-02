@@ -123,6 +123,7 @@ alias lg="lazygit"
 alias cl="clear"
 alias task="go-task"
 alias update="sudo dnf --refresh update -y && topgrade -y"
+alias doco="docker compose"
 
 # spaceship opts
 SPACESHIP_USER_SHOW=always
@@ -145,6 +146,10 @@ SPACESHIP_AWS_COLOR="#f09228"
 SPACESHIP_AZURE_PREFIX="with subscription "
 SPACESHIP_AZURE_SYMBOL=" "
 SPACESHIP_AZURE_COLOR="#33B4F0"
+
+# useful funcs
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+alias loadenv="set -a && source .env && set +a"
 
 # sdkman
 export SDKMAN_DIR="$HOME/.sdkman"

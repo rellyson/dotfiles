@@ -18,5 +18,4 @@
           - com.jgraph.drawio.desktop
           - org.localsend.localsend_app
           - com.spotify.Client
-          - io.github.mimbrero.WhatsAppDesktop
-          - org.telegram.desktop
+          - com.rtosta.zapzap

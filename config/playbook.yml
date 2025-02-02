@@ -1,6 +1,7 @@
 ---
 - name: Config setup
   hosts: localhost
+  gather_facts: true
   tasks:
     - name: Append gitconfig
       ansible.builtin.blockinfile:
@@ -13,11 +14,18 @@
         dest: "{{ ansible_env.HOME }}/.ssh/config"
         mode: '0644'
 
+    - name: Chech if yamllint binary exists
+      ansible.builtin.command: which yamllint
+      changed_when: false
+      failed_when: false
+      register: yamllint_exists
+
     - name: Ensure yamllint directory
       ansible.builtin.file:
         path: "{{ ansible_env.HOME }}/.config/yamllint"
         state: "directory"
         mode: "0700"
+      when: yamllint_exists.rc is defined
 
     - name: Link yamllint config
       ansible.builtin.file:
@@ -25,6 +33,7 @@
         dest: "{{ ansible_env.HOME }}/.config/yamllint/config"
         state: "link"
         force: true
+      when: yamllint_exists.rc is defined
 
     - name: Ensure aws directory
       ansible.builtin.file:
@@ -43,3 +52,9 @@
         src: "{{ playbook_dir }}/aws/credentials"
         dest: "{{ ansible_env.HOME }}/.aws/credentials"
         mode: '0644'
+
+    - name: Link dnf config
+      ansible.builtin.blockinfile:
+        block: "{{ lookup('ansible.builtin.file', './dnf.conf') }}"
+        path: "/etc/dnf/dnf.conf"
+      when: ansible_os_family == 'RedHat'

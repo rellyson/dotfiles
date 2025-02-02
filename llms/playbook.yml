@@ -2,8 +2,21 @@
 - name: LLMs
   hosts: localhost
   tasks:
-    - name: Execute llms installation script
+    - name: Check if ollama is installed
+      ansible.builtin.command: which ollama
+      register: ollama_installed
+      changed_when: false
+      failed_when: false
+
+    - name: Install ollama
       become: true
       ansible.builtin.script: ./installation.sh
       args:
         executable: /bin/bash
+      when: ollama_installed.rc is defined
+
+    - name: Install LLMs
+      ansible.builtin.script: ./pull_llms.sh
+      args:
+        executable: /bin/bash
+      when: ollama_installed.rc is defined
